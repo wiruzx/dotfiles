@@ -28,11 +28,17 @@
 ;; Spaces instead of tabs
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(tab-stop-list (quote (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120))))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" default)))
+ '(tab-stop-list
+   (quote
+    (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120)))
+ '(tab-width 4))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -81,6 +87,30 @@
 (global-set-key (kbd "M-x") 'smex)
 ;; This is my old M-x
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; Folding an xml
+
+(require 'hideshow)
+(require 'sgml-mode)
+(require 'nxml-mode)
+
+(add-to-list 'hs-special-modes-alist
+             '(nxml-mode
+               "<!--\\|<[^/>]*[^/]>"
+               "-->\\|</[^/>]*[^/]>"
+
+               "<!--"
+               sgml-skip-tag-forward
+               nil))
+
+(add-hook 'nxml-mode-hook 'hs-minor-mode)
+
+(define-key nxml-mode-map (kbd "C-c h") 'hs-toggle-hiding)
+
+;; XMl mode 4 spaces
+
+(setq nxml-child-indent 4
+      nxml-attribute-indent 4)
 
 ;; Color theme
 
@@ -159,14 +189,7 @@
 
 ;; Automatic generated shit I have no idea about
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" default))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
