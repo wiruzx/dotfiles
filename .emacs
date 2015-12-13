@@ -183,6 +183,10 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; Don't show initial buffer
+
+(setq inhibit-startup-message t)
+
 ;; Other stuff
 
 (setq max-lisp-eval-depth 10000)
