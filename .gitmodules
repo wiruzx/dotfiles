@@ -10,3 +10,6 @@
 [submodule "emacsplugins/yasnippet"]
 	path = emacsplugins/yasnippet
 	url = https://github.com/capitaomorte/yasnippet.git
+[submodule "emacsplugins/swift-mode"]
+	path = emacsplugins/swift-mode
+	url = https://github.com/wiruzx/swift-mode.git
