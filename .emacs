@@ -57,12 +57,7 @@
 
 ;; swift-mode
 
-;; (add-to-list 'load-path "~/.emacs.d/plugins/swift-mode/")
-;; (require 'swift-mode)
-
-;; apple-swift-mode
-
-(add-to-list 'load-path "~/.emacs.d/plugins/apple-swift-mode/")
+(add-to-list 'load-path "~/.emacs.d/plugins/swift-mode/")
 (require 'swift-mode)
 (require 'swift-project-settings)
 
