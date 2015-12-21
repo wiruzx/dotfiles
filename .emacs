@@ -182,6 +182,11 @@
 
 (setq inhibit-startup-message t)
 
+;; Fireplace
+
+(add-to-list 'load-path "~/.emacs.d/plugins/emacs-fireplace/")
+(require 'fireplace)
+
 ;; Other stuff
 
 (setq max-lisp-eval-depth 10000)
