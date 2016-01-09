@@ -55,6 +55,11 @@
 
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
+;; When org-mode starts it (org-mode-map) overrides the ace-jump-mode.
+(add-hook 'org-mode-hook
+          (lambda ()
+            (local-set-key (kbd "\C-c SPC") 'ace-jump-mode)))
+
 ;; swift-mode
 
 (add-to-list 'load-path "~/.emacs.d/plugins/swift-mode/")
