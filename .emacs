@@ -204,6 +204,7 @@
 
 ;; Other stuff
 
+(delete-selection-mode t)
 (setq max-lisp-eval-depth 10000)
 
 ;; Automatic generated shit I have no idea about
