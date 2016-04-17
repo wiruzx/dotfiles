@@ -54,10 +54,11 @@
 
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
-;; When org-mode starts it (org-mode-map) overrides the ace-jump-mode.
 (add-hook 'org-mode-hook
           (lambda ()
-            (local-set-key (kbd "\C-c SPC") 'ace-jump-mode)))
+            ;; When org-mode starts it (org-mode-map) overrides the ace-jump-mode.
+            (local-set-key (kbd "\C-c SPC") 'ace-jump-mode)
+            (org-indent-mode t)))
 
 ;; swift-mode
 
