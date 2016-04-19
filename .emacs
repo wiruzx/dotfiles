@@ -43,6 +43,8 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
+(defvaralias 'c-basic-offset 'tab-width)
+
 ;; Ace jump mode
 
 (add-to-list 'load-path "~/.emacs.d/plugins/ace-jump-mode/ace-jump-mode.el")
