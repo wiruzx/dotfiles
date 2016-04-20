@@ -5,6 +5,11 @@
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
+;; Number of lines
+
+(global-linum-mode t)
+(setq linum-format "%d ")
+
 ;; switch-window
 
 (add-to-list 'load-path "~/.emacs.d/plugins/switch-window/")
