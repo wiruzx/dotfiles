@@ -13,6 +13,3 @@
 [submodule "emacsplugins/swift-mode"]
 	path = emacsplugins/swift-mode
 	url = https://github.com/wiruzx/swift-mode.git
-[submodule "emacsplugins/emacs-fireplace"]
-	path = emacsplugins/emacs-fireplace
-	url = https://github.com/johanvts/emacs-fireplace.git
