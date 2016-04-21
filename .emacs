@@ -5,6 +5,11 @@
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
+;; scratch buffer
+
+(setq initial-scratch-message nil)
+(setq initial-major-mode 'org-mode)
+
 ;; Number of lines
 
 (global-linum-mode t)
