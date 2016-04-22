@@ -13,3 +13,6 @@
 [submodule "emacsplugins/swift-mode"]
 	path = emacsplugins/swift-mode
 	url = https://github.com/wiruzx/swift-mode.git
+[submodule "emacsplugins/hydra"]
+	path = emacsplugins/hydra
+	url = https://github.com/abo-abo/hydra

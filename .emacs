@@ -5,6 +5,11 @@
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
+;; hydra
+
+(add-to-list 'load-path "~/.emacs.d/plugins/hydra/")
+(require 'hydra)
+
 ;; scratch buffer
 
 (setq initial-scratch-message nil)
