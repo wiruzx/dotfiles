@@ -10,6 +10,11 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/hydra/")
 (require 'hydra)
 
+;; hydras
+
+(load "~/.emacs.d/hydras/window")
+(global-set-key (kbd "C-c w") 'hydra-window/body)
+
 ;; scratch buffer
 
 (setq initial-scratch-message nil)
