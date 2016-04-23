@@ -25,12 +25,6 @@
 (global-linum-mode t)
 (setq linum-format "%d ")
 
-;; switch-window
-
-(add-to-list 'load-path "~/.emacs.d/plugins/switch-window/")
-(require 'switch-window)
-(global-set-key (kbd "C-x o") 'switch-window)
-
 ;; company-mode
 
 (add-hook 'after-init-hook 'global-company-mode)

@@ -4,9 +4,6 @@
 [submodule "emacsplugins/company-sourcekit"]
 	path = emacsplugins/company-sourcekit
 	url = https://github.com/nathankot/company-sourcekit.git
-[submodule "emacsplugins/switch-window"]
-	path = emacsplugins/switch-window
-	url = https://github.com/dimitri/switch-window.git
 [submodule "emacsplugins/yasnippet"]
 	path = emacsplugins/yasnippet
 	url = https://github.com/capitaomorte/yasnippet.git
