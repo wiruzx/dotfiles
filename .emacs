@@ -22,7 +22,6 @@
 
 ;; Number of lines
 
-(global-linum-mode t)
 (setq linum-format "%d ")
 
 ;; company-mode
