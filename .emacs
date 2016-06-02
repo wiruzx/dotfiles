@@ -5,6 +5,10 @@
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
+;; Ido mode
+
+(ido-mode t)
+
 ;; Shift the selected region right if distance is postive, left if
 ;; negative
 
