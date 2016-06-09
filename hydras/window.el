@@ -19,7 +19,8 @@
          (interactive)
          (split-window-below)
          (windmove-down)))
-  
+
+  ("r" rotate-windows)
   ("o" delete-other-windows :exit t)
   ("dw" delete-window)
   ("df" kill-this-buffer)
