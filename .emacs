@@ -213,6 +213,9 @@
 
 ;; magit
 
+(add-to-list 'load-path "~/.emacs.d/plugins/magit/lisp/")
+(require 'magit)
+
 (global-set-key (kbd "C-c g") 'magit-status)
 
 ;; Russian keyboard support
