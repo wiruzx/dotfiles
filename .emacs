@@ -65,6 +65,11 @@
 (load "~/.emacs.d/hydras/window")
 (global-set-key (kbd "C-c w") 'hydra-window/body)
 
+(global-set-key (kbd "C-x o") (lambda ()
+                                (interactive)
+                                (other-window 1)
+                                (hydra-window/body)))
+
 ;; scratch buffer
 
 (setq initial-scratch-message nil)
