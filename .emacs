@@ -5,6 +5,21 @@
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
+;; Helm
+
+;; emacs-async is dependency for helm
+(add-to-list 'load-path "~/.emacs.d/plugins/emacs-async/")
+
+(add-to-list 'load-path "~/.emacs.d/plugins/helm/")
+
+(require 'helm-config)
+
+;; keybindings
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+;; this is old M-x
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 ;; Windows swapping
 
 (defun rotate-windows (arg)
@@ -161,12 +176,6 @@
 ;; iBuffer
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-
-;; Smex
-
-(global-set-key (kbd "M-x") 'smex)
-;; This is my old M-x
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Folding an xml
 

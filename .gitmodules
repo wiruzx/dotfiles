@@ -16,3 +16,9 @@
 [submodule "emacsplugins/magit"]
 	path = emacsplugins/magit
 	url = https://github.com/magit/magit
+[submodule "emacsplugins/emacs-async"]
+	path = emacsplugins/emacs-async
+	url = https://github.com/jwiegley/emacs-async
+[submodule "emacsplugins/helm"]
+	path = emacsplugins/helm
+	url = https://github.com/emacs-helm/helm
