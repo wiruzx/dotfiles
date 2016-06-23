@@ -22,3 +22,6 @@
 [submodule "emacsplugins/helm"]
 	path = emacsplugins/helm
 	url = https://github.com/emacs-helm/helm
+[submodule "emacsplugins/helm-ls-git"]
+	path = emacsplugins/helm-ls-git
+	url = https://github.com/emacs-helm/helm-ls-git
