@@ -12,8 +12,10 @@
 
 (add-to-list 'load-path "~/.emacs.d/plugins/helm/")
 
+(require 'helm)
 (require 'helm-config)
 
+(helm-autoresize-mode 1)
 (setq helm-split-window-in-side-p 1)
 
 ;; keybindings
