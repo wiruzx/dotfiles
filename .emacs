@@ -14,6 +14,8 @@
 
 (require 'helm-config)
 
+(setq helm-split-window-in-side-p 1)
+
 ;; keybindings
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
