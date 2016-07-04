@@ -114,10 +114,10 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/company-sourcekit/")
 (require 'company-sourcekit)
 
-(setq company-sourcekit-use-yasnippet 1)
-(add-hook 'swift-mode-hook (lambda ()
-                          (set (make-local-variable 'company-backends) '(company-sourcekit))
-                          (company-mode)))
+;; (setq company-sourcekit-use-yasnippet 1)
+;; (add-hook 'swift-mode-hook (lambda ()
+;;                           (set (make-local-variable 'company-backends) '(company-sourcekit))
+;;                           (company-mode)))
 
 ;; Spaces instead of tabs
 
@@ -176,9 +176,9 @@
 
 ;; yasnippet
 
-(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
-(require 'yasnippet)
-(yas-global-mode 1)
+;; (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+;; (require 'yasnippet)
+;; (yas-global-mode 1)
 
 ;; Undo tree
 
