@@ -107,6 +107,8 @@
 
 (require 'company)
 
+(setq company-dabbrev-downcase nil)
+
 (add-hook 'after-init-hook 'global-company-mode)
 
 (add-to-list 'company-backends '(company-capf company-dabbrev))
