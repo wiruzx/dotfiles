@@ -5,6 +5,15 @@
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
+;; GUI Emacs settings
+
+(when window-system
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1)
+  (set-face-attribute 'default nil :font "Hack Regular-12")
+  (blink-cursor-mode 0)
+  (setq-default line-spacing 2))
+
 ;; Helm
 
 ;; emacs-async is dependency for helm
