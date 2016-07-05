@@ -10,6 +10,7 @@
 (when window-system
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
+  (set-window-fringes nil 0 0)
   (set-face-attribute 'default nil :font "Hack Regular-12")
   (blink-cursor-mode 0)
   (setq-default line-spacing 2))
