@@ -1,3 +1,6 @@
+(require 'helm)
+(require 'ido)
+
 (defhydra hydra-window (:hint nil)
   "hydra window"
   ("h" windmove-left)
@@ -19,6 +22,10 @@
          (interactive)
          (split-window-below)
          (windmove-down)))
+
+  ("b" helm-buffers-list)
+  ("p" helm-browse-project)
+  ("f" ido-find-file)
 
   ("r" rotate-windows)
   ("o" delete-other-windows :exit t)
