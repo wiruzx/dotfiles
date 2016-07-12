@@ -17,7 +17,7 @@
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
   (set-fringe-mode '(4 . 0))
-  (set-face-attribute 'default nil :font "Hack Regular-12")
+  (set-default-font "-*-Hack-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")
   (blink-cursor-mode 0)
   (setq-default line-spacing 2))
 
