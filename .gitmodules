@@ -31,3 +31,6 @@
 [submodule "emacsplugins/powerline"]
 	path = emacsplugins/powerline
 	url = https://github.com/milkypostman/powerline.git
+[submodule "emacsplugins/multi-term"]
+	path = emacsplugins/multi-term
+	url = https://github.com/emacsmirror/multi-term.git

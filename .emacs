@@ -5,6 +5,14 @@
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
+;; multi-term
+
+(add-to-list 'load-path "~/.emacs.d/plugins/multi-term")
+
+(require 'multi-term)
+
+(setq multi-term-program "/usr/local/bin/zsh")
+
 ;; Mouse scrolling
 
 (unless window-system
