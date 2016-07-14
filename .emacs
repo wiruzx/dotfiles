@@ -5,6 +5,13 @@
 (package-initialize)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
+;; Powerline
+
+(add-to-list 'load-path "~/.emacs.d/plugins/powerline/")
+
+(require 'powerline)
+(powerline-default-theme)
+
 ;; GUI Emacs settings
 
 (when window-system
