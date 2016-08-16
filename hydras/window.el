@@ -26,6 +26,7 @@
          (next-buffer)))
 
   ("b" helm-buffers-list)
+  ("G" helm-grep-do-git-grep)
   ("p" helm-browse-project)
   ("f" ido-find-file)
 
