@@ -64,6 +64,11 @@
 (setq helm-split-window-in-side-p 1)
 
 ;; keybindings
+
+(global-set-key (kbd "C-c C-g") (lambda ()
+                                  (interactive)
+                                  (helm-grep-do-git-grep t)))
+
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 ;; this is old M-x
