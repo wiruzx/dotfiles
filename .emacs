@@ -346,6 +346,8 @@
 
 ;; Other stuff
 
+(global-set-key (kbd "C-j") #'newline-and-indent)
+
 (delete-selection-mode t)
 (setq max-lisp-eval-depth 10000)
 
