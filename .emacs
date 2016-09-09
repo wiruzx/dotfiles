@@ -243,6 +243,10 @@
 
 ;; Undo tree
 
+(add-to-list 'load-path "~/.emacs.d/plugins/undo-tree")
+
+(require 'undo-tree)
+
 (global-undo-tree-mode)
 
 ;; iBuffer
