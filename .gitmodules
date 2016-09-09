@@ -40,3 +40,6 @@
 [submodule "emacsplugins/undo-tree"]
 	path = emacsplugins/undo-tree
 	url = https://github.com/emacsmirror/undo-tree
+[submodule "emacsplugins/with-editor"]
+	path = emacsplugins/with-editor
+	url = https://github.com/magit/with-editor

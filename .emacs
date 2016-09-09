@@ -303,6 +303,11 @@
 
 ;; magit
 
+;; also requires dash
+
+(add-to-list 'load-path "~/.emacs.d/plugins/with-editor/")
+(require 'with-editor)
+
 (add-to-list 'load-path "~/.emacs.d/plugins/magit/lisp/")
 (require 'magit)
 
