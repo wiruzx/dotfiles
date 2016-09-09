@@ -34,3 +34,6 @@
 [submodule "emacsplugins/multi-term"]
 	path = emacsplugins/multi-term
 	url = https://github.com/emacsmirror/multi-term.git
+[submodule "emacsplugins/dash.el"]
+	path = emacsplugins/dash.el
+	url = https://github.com/magnars/dash.el.git

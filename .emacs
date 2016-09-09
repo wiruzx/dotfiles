@@ -165,6 +165,13 @@
 
 ;; company-sourcekit
 
+;; company-sourcekit's dependencies:
+
+(add-to-list 'load-path "~/.emacs.d/plugins/dash.el")
+
+(require 'dash)
+(require 'dash-functional)
+
 (add-to-list 'load-path "~/.emacs.d/plugins/company-sourcekit/")
 (require 'company-sourcekit)
 
