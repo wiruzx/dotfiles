@@ -43,3 +43,6 @@
 [submodule "emacsplugins/with-editor"]
 	path = emacsplugins/with-editor
 	url = https://github.com/magit/with-editor
+[submodule "emacsthemes/hc-zenburn-emacs"]
+	path = emacsthemes/hc-zenburn-emacs
+	url = https://github.com/edran/hc-zenburn-emacs.git
