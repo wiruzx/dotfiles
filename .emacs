@@ -202,7 +202,7 @@
 
 ;; Ace jump mode
 
-(add-to-list 'load-path "~/.emacs.d/plugins/ace-jump-mode/ace-jump-mode.el")
+(add-to-list 'load-path "~/.emacs.d/plugins/ace-jump-mode")
 (autoload
   'ace-jump-mode
   "ace-jump-mode"
