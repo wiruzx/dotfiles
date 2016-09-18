@@ -279,9 +279,9 @@
 
 ;; Color theme
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/hc-zenburn-emacs")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/zenburn-emacs")
 
-(load-theme 'hc-zenburn t)
+(load-theme 'zenburn t)
 
 ;; Hiding extra panels
 

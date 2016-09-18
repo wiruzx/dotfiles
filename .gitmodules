@@ -46,3 +46,6 @@
 [submodule "emacsthemes/hc-zenburn-emacs"]
 	path = emacsthemes/hc-zenburn-emacs
 	url = https://github.com/edran/hc-zenburn-emacs.git
+[submodule "emacsthemes/zenburn-emacs"]
+	path = emacsthemes/zenburn-emacs
+	url = https://github.com/bbatsov/zenburn-emacs
