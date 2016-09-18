@@ -1,9 +1,8 @@
 
-;; Packages
+;; cask
 
-(require 'package)
-(package-initialize)
-(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+(cask-initialize)
 
 ;; multi-term
 
