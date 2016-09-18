@@ -1,6 +1,7 @@
 (source gnu)
 (source melpa)
 
+(depends-on "dumb-jump")
 (depends-on "helm")
 (depends-on "multi-term")
 (depends-on "powerline")

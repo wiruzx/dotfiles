@@ -1,4 +1,3 @@
-
 ;; cask
 
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
@@ -201,6 +200,17 @@
 (require 'swift-project-settings)
 
 (setq swift-basic-offset 4)
+
+;; dumb-jump
+
+(require 'dumb-jump)
+
+(defun enable-dumb-jump ()
+  (dumb-jump-mode)
+  (local-set-key (kbd "M-.") 'dumb-jump-go))
+
+(add-hook 'swift-mode-hook 'enable-dumb-jump)
+(add-hook 'objc-mode-hook 'enable-dumb-jump)
 
 ;; Org mode
 
