@@ -1,6 +1,23 @@
 (source gnu)
 (source melpa)
 
+(depends-on "helm")
+(depends-on "multi-term")
+(depends-on "powerline")
+(depends-on "helm-ls-git")
+(depends-on "hydra")
+(depends-on "company")
+
+(depends-on "company-sourcekit")
+
+(depends-on "ace-jump-mode")
+
+(depends-on "swift-mode" :git "https://github.com/wiruzx/swift-mode" :ref "master")
+
+(depends-on "undo-tree")
+
+(depends-on "zenburn-theme" :git "https://github.com/bbatsov/zenburn-emacs" :ref "master")
+
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "dash")

@@ -6,8 +6,6 @@
 
 ;; multi-term
 
-(add-to-list 'load-path "~/.emacs.d/plugins/multi-term")
-
 (require 'multi-term)
 
 (setq multi-term-program "/usr/local/bin/zsh")
@@ -27,8 +25,6 @@
   (setq mouse-sel-mode t))
 
 ;; Powerline
-
-(add-to-list 'load-path "~/.emacs.d/plugins/powerline/")
 
 (require 'powerline)
 (powerline-default-theme)
@@ -51,11 +47,6 @@
 
 ;; Helm
 
-;; emacs-async is dependency for helm
-(add-to-list 'load-path "~/.emacs.d/plugins/emacs-async/")
-
-(add-to-list 'load-path "~/.emacs.d/plugins/helm/")
-
 (require 'helm)
 (require 'helm-config)
 
@@ -74,8 +65,6 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; helm-ls-git
-
-(add-to-list 'load-path "~/.emacs.d/plugins/helm-ls-git/")
 
 (require 'helm-ls-git)
 
@@ -133,7 +122,6 @@
 
 ;; hydra
 
-(add-to-list 'load-path "~/.emacs.d/plugins/hydra/")
 (require 'hydra)
 
 ;; hydras
@@ -152,8 +140,6 @@
 
 ;; company-mode
 
-(add-to-list 'load-path "~/.emacs.d/plugins/company-mode/")
-
 (require 'company)
 
 (setq company-dabbrev-downcase nil)
@@ -164,14 +150,6 @@
 
 ;; company-sourcekit
 
-;; company-sourcekit's dependencies:
-
-(add-to-list 'load-path "~/.emacs.d/plugins/dash.el")
-
-(require 'dash)
-(require 'dash-functional)
-
-(add-to-list 'load-path "~/.emacs.d/plugins/company-sourcekit/")
 (require 'company-sourcekit)
 
 ;; (setq company-sourcekit-use-yasnippet 1)
@@ -201,7 +179,8 @@
 
 ;; Ace jump mode
 
-(add-to-list 'load-path "~/.emacs.d/plugins/ace-jump-mode")
+(require 'ace-jump-mode)
+
 (autoload
   'ace-jump-mode
   "ace-jump-mode"
@@ -218,7 +197,6 @@
 
 ;; swift-mode
 
-(add-to-list 'load-path "~/.emacs.d/plugins/swift-mode/")
 (require 'swift-mode)
 (require 'swift-project-settings)
 
@@ -241,8 +219,6 @@
 ;; (yas-global-mode 1)
 
 ;; Undo tree
-
-(add-to-list 'load-path "~/.emacs.d/plugins/undo-tree")
 
 (require 'undo-tree)
 
@@ -278,8 +254,6 @@
 
 ;; Color theme
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/zenburn-emacs")
-
 (load-theme 'zenburn t)
 
 ;; Hiding extra panels
@@ -304,12 +278,6 @@
 
 ;; magit
 
-;; also requires dash
-
-(add-to-list 'load-path "~/.emacs.d/plugins/with-editor/")
-(require 'with-editor)
-
-(add-to-list 'load-path "~/.emacs.d/plugins/magit/lisp/")
 (require 'magit)
 
 (global-set-key (kbd "C-c g") 'magit-status)
