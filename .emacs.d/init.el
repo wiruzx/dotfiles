@@ -345,6 +345,10 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; Kill this buffer instead of prompt
+
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+
 ;; Don't show initial buffer
 
 (setq inhibit-startup-message t)
