@@ -61,6 +61,10 @@
 
 ;; keybindings
 
+(global-set-key (kbd "C-c M-w") 'pbcopy)
+(global-set-key (kbd "C-c C-w") 'pbcut)
+(global-set-key (kbd "C-c C-y") 'pbpaste)
+
 (global-set-key (kbd "C-c C-g") (lambda ()
                                   (interactive)
                                   (helm-grep-do-git-grep t)))
