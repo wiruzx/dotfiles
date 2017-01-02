@@ -158,6 +158,9 @@
 
 (add-to-list 'company-backends '(company-capf company-dabbrev))
 
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "C-j") 'company-complete-selection))
+
 ;; company-sourcekit
 
 (require 'company-sourcekit)
