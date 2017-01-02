@@ -64,10 +64,11 @@
 (global-set-key (kbd "C-c M-w") 'pbcopy)
 (global-set-key (kbd "C-c C-w") 'pbcut)
 (global-set-key (kbd "C-c C-y") 'pbpaste)
-
 (global-set-key (kbd "C-c C-g") (lambda ()
                                   (interactive)
-                                  (helm-grep-do-git-grep t)))
+                                  (if mark-active
+                                      (helm-grep-git-1 default-directory t nil (buffer-substring-no-properties (region-beginning) (region-end)))
+                                    (helm-grep-do-git-grep t))))
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
