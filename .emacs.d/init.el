@@ -310,6 +310,16 @@
 
 (global-set-key (kbd "C-c g") 'magit-status)
 
+;; diff-hl
+
+(require 'diff-hl)
+
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+
+(diff-hl-margin-mode)
+(diff-hl-flydiff-mode)
+(global-diff-hl-mode)
+
 ;; Russian keyboard support
 
 (when (eq system-type 'darwin)
