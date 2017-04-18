@@ -10,6 +10,10 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;; org-jira
+
+(setq jiralib-url (getenv "JIRA_PATH"))
+
 ;; multi-term
 
 (require 'multi-term)
