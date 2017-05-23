@@ -218,6 +218,7 @@
           (lambda ()
             ;; When org-mode starts it (org-mode-map) overrides the ace-jump-mode.
             (local-set-key (kbd "\C-c SPC") 'ace-jump-mode)
+            (local-set-key (kbd "\C-c a") 'org-agenda)
             (org-indent-mode t)))
 
 ;; swift-mode
