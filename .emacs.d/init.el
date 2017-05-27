@@ -10,6 +10,10 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;; org-bullets
+
+(require 'org-bullets)
+
 ;; gist
 
 (require 'gist)
@@ -219,6 +223,7 @@
             ;; When org-mode starts it (org-mode-map) overrides the ace-jump-mode.
             (local-set-key (kbd "\C-c SPC") 'ace-jump-mode)
             (local-set-key (kbd "\C-c a") 'org-agenda)
+            (org-bullets-mode t)
             (org-indent-mode t)))
 
 ;; swift-mode
