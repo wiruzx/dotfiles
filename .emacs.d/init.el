@@ -73,9 +73,13 @@
 
 ;; keybindings
 
-(global-set-key (kbd "C-c M-w") 'pbcopy)
-(global-set-key (kbd "C-c C-w") 'pbcut)
-(global-set-key (kbd "C-c C-y") 'pbpaste)
+(defun last-thing-from-kill-ring ()
+  (substring-no-properties (car kill-ring)))
+
+(global-set-key (kbd "C-c C-y") (lambda ()
+                                  (interactive)
+                                  (shell-command (concat "echo -n \"" (last-thing-from-kill-ring) "\" | pbcopy"))))
+
 (global-set-key (kbd "C-c C-g") (lambda ()
                                   (interactive)
                                   (if mark-active
