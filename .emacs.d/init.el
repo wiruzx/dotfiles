@@ -14,6 +14,14 @@
 
 (require 'org-bullets)
 
+(setq org-bullets-bullet-list '(
+                                "◉"
+                                "○"
+                                "●"
+                                "✚"
+                                "◆"
+                                "▶"))
+
 ;; gist
 
 (require 'gist)
