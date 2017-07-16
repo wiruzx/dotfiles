@@ -23,10 +23,7 @@
 (setq org-bullets-bullet-list '(
                                 "◉"
                                 "○"
-                                "●"
-                                "✚"
-                                "◆"
-                                "▶"))
+                                "●"))
 
 ;; gist
 
