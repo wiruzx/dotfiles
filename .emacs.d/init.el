@@ -211,6 +211,15 @@
  '(package-selected-packages
    (quote
     (protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell dumb-jump drag-stuff company-sourcekit ace-jump-mode)))
+ '(safe-local-variable-values
+   (quote
+    ((org-todo-keyword-faces
+      ("HOLD" . "yellow")
+      ("SUSPENDED" . "grey"))
+     (org-todo-keyword-faces
+      ("HOLD" . "yellow"))
+     (org-todo-keyword-faces
+      ("WAIT" . "yellow")))))
  '(tab-stop-list
    (quote
     (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120)))
