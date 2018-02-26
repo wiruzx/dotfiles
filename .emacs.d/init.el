@@ -339,15 +339,25 @@
 
 (global-set-key (kbd "C-c g") 'magit-status)
 
-;; diff-hl
+;; git-gutter
 
-(require 'diff-hl)
+(require 'git-gutter)
 
-(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+(set-face-foreground 'git-gutter:modified "blue")
+(set-face-foreground 'git-gutter:added "green")
+(set-face-foreground 'git-gutter:deleted "red")
 
-(diff-hl-margin-mode)
-(diff-hl-flydiff-mode)
-(global-diff-hl-mode)
+(set-face-background 'git-gutter:added "gray")
+(set-face-background 'git-gutter:modified "gray")
+(set-face-background 'git-gutter:deleted "gray")
+
+(add-hook 'prog-mode-hook (lambda ()
+                            (git-gutter-mode 1)
+                            (custom-set-variables
+                             '(git-gutter:modified-sign "~")
+                             '(git-gutter:added-sign "+")
+                             '(git-gutter:deleted-sign "-"))))
+
 
 ;; Russian keyboard support
 
