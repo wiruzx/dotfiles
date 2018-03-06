@@ -43,7 +43,7 @@
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yasnippet")
-(depends-on "diff-hl")
+(depends-on "git-gutter")
 (depends-on "org-jira")
 (depends-on "gist")
 (depends-on "org-bullets")

@@ -215,11 +215,7 @@
    (quote
     ((org-todo-keyword-faces
       ("HOLD" . "yellow")
-      ("SUSPENDED" . "grey"))
-     (org-todo-keyword-faces
-      ("HOLD" . "yellow"))
-     (org-todo-keyword-faces
-      ("WAIT" . "yellow")))))
+      ("SUSPENDED" . "grey")))))
  '(tab-stop-list
    (quote
     (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120)))
@@ -248,6 +244,7 @@
             (local-set-key (kbd "\C-c SPC") 'ace-jump-mode)
             (local-set-key (kbd "\C-c a") 'org-agenda)
             (org-bullets-mode t)
+            (setq org-clock-into-drawer t)
             (org-indent-mode t)))
 
 ;; swift-mode
@@ -348,15 +345,25 @@
 
 (global-set-key (kbd "C-c g") 'magit-status)
 
-;; diff-hl
+;; git-gutter
 
-(require 'diff-hl)
+(require 'git-gutter)
 
-(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+(set-face-foreground 'git-gutter:modified "blue")
+(set-face-foreground 'git-gutter:added "green")
+(set-face-foreground 'git-gutter:deleted "red")
 
-(diff-hl-margin-mode)
-(diff-hl-flydiff-mode)
-(global-diff-hl-mode)
+(set-face-background 'git-gutter:added "gray")
+(set-face-background 'git-gutter:modified "gray")
+(set-face-background 'git-gutter:deleted "gray")
+
+(add-hook 'prog-mode-hook (lambda ()
+                            (git-gutter-mode 1)
+                            (custom-set-variables
+                             '(git-gutter:modified-sign "~")
+                             '(git-gutter:added-sign "+")
+                             '(git-gutter:deleted-sign "-"))))
+
 
 ;; Russian keyboard support
 
