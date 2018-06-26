@@ -9,3 +9,7 @@ git worktree add ../$ticket_number
 cd ../$ticket_number
 ./aida -ei CHAPIOS-$ticket_number
 open Chappy/Chappy.xcworkspace
+
+if [ "$2"  == "-c" ]; then
+    pwd | pbcopy
+fi
