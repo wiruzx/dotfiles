@@ -87,16 +87,6 @@
 (defun last-thing-from-kill-ring ()
   (substring-no-properties (car kill-ring)))
 
-(global-set-key (kbd "C-c C-y") (lambda ()
-                                  (interactive)
-                                  (shell-command (concat "echo -n \"" (last-thing-from-kill-ring) "\" | pbcopy"))))
-
-(global-set-key (kbd "C-c C-g") (lambda ()
-                                  (interactive)
-                                  (if mark-active
-                                      (helm-grep-git-1 default-directory t nil (buffer-substring-no-properties (region-beginning) (region-end)))
-                                    (helm-grep-do-git-grep t))))
-
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 ;; this is old M-x
@@ -325,19 +315,8 @@
 
 ;; Clipboard
 
-(defun pbcopy ()
-  (interactive)
-  (call-process-region (point) (mark) "pbcopy")
-  (setq deactivate-mark t))
-
-(defun pbpaste ()
-  (interactive)
-  (call-process-region (point) (if mark-active (mark) (point)) "pbpaste" t t))
-
-(defun pbcut ()
-  (interactive)
-  (pbcopy)
-    (delete-region (region-beginning) (region-end)))
+(require 'pbcopy)
+(turn-on-pbcopy)
 
 ;; magit
 

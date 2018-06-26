@@ -48,3 +48,4 @@
 (depends-on "gist")
 (depends-on "org-bullets")
 (depends-on "haskell-mode")
+(depends-on "pbcopy")
