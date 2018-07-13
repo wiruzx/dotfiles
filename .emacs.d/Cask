@@ -49,3 +49,4 @@
 (depends-on "org-bullets")
 (depends-on "haskell-mode")
 (depends-on "pbcopy")
+(depends-on "switch-window")
