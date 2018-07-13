@@ -10,6 +10,11 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;; expand-region
+
+(require 'expand-region)
+(global-set-key (kbd "M-'") 'er/expand-region)
+
 ;; winner-mode
 
 (when (fboundp 'winner-mode)
