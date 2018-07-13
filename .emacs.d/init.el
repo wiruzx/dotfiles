@@ -10,11 +10,20 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;; winner-mode
+
+(when (fboundp 'winner-mode)
+  (winner-mode 1))
+
+(global-set-key (kbd "C-c u") 'winner-undo)
+(global-set-key (kbd "C-c r") 'winner-redo)
+
 ;; switch-window
 
 (require 'switch-window)
 
 (global-set-key (kbd "C-x o") 'switch-window)
+
 (global-set-key (kbd "C-x 1") 'switch-window-then-maximize)
 (global-set-key (kbd "C-x 2") 'switch-window-then-split-right)
 (global-set-key (kbd "C-x 3") 'switch-window-then-split-below)
