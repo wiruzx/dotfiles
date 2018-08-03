@@ -13,7 +13,7 @@
 ;; expand-region
 
 (require 'expand-region)
-(global-set-key (kbd "M-'") 'er/expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; winner-mode
 
@@ -26,6 +26,8 @@
 ;; switch-window
 
 (require 'switch-window)
+
+(setq switch-window-increase 20)
 
 (global-set-key (kbd "C-x o") 'switch-window)
 
