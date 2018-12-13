@@ -247,6 +247,29 @@
 
 (defvaralias 'c-basic-offset 'tab-width)
 
+;; Intercepting urls
+
+(defun jira-link-recognizer (string)
+  (if (string-match "https?://jira\.*?/browse/\\([a-zA-Z]*-[0-9]*\\)" string)
+      (if-let ((issue-number (match-string 1 string)))
+          (cons string issue-number))))
+
+(defvar org-link-recognizers '(jira-link-recognizer))
+
+(defun find-recognizer (value recognizers)
+  (if-let ((head (car recognizers)))
+      (if-let ((match (funcall head value)))
+          match
+        (find-recognizer value (cdr recognizers)))))
+
+(defun org-insert-link-interceptor ()
+  "If it could recognizer the link from the clipboard it'll prettify and paste it"
+  (interactive)
+  (let ((clipboard (shell-command-to-string "pbpaste")))
+    (if-let ((match (find-recognizer clipboard org-link-recognizers)))
+        (insert (org-make-link-string (car match) (cdr match)))
+      (funcall-interactively (org-insert-link)))))
+
 ;; Ace jump mode
 
 (require 'ace-jump-mode)
@@ -264,6 +287,7 @@
             ;; When org-mode starts it (org-mode-map) overrides the ace-jump-mode.
             (local-set-key (kbd "\C-c SPC") 'ace-jump-mode)
             (local-set-key (kbd "\C-c a") 'org-agenda)
+            (local-set-key (kbd "C-c C-l") 'org-insert-link-interceptor)
             (org-bullets-mode t)
             (setq org-clock-into-drawer t)
             (org-indent-mode t)))
