@@ -1,3 +1,5 @@
 .cask
 .emacs.d/elpa/*
 .emacs.d/ido.last*
+.emacs.d/auto-save-list/*
+**/*~
