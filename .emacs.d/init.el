@@ -47,6 +47,16 @@
 (set-face-background 'hl-line "#3e4446")
 (set-face-foreground 'highlight nil)
 
+;; org todo states
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "|" "DONE(d)")
+        (sequence "HOLD(h)")
+        (sequence "|" "CANCELED(c)" "SUSPENDED(s)")))
+
+(setq org-todo-keyword-faces
+      '(("HOLD" . "yellow") ("SUSPENDED" . "grey")))
+
 ;; org-bullets
 
 (require 'org-bullets)
