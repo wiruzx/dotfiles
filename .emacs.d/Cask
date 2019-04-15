@@ -51,3 +51,4 @@
 (depends-on "pbcopy")
 (depends-on "switch-window")
 (depends-on "expand-region")
+(depends-on "projectile")
