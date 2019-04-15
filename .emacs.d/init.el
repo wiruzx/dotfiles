@@ -10,6 +10,14 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;; projectile
+
+(require 'projectile)
+
+(projectile-mode t)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
 ;; expand-region
 
 (require 'expand-region)
