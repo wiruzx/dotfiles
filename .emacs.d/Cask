@@ -5,7 +5,6 @@
 (depends-on "helm")
 (depends-on "multi-term")
 (depends-on "powerline")
-(depends-on "helm-ls-git")
 (depends-on "hydra")
 (depends-on "company")
 

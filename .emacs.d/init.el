@@ -142,12 +142,6 @@
 ;; this is old M-x
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; helm-ls-git
-
-(require 'helm-ls-git)
-
-(global-set-key (kbd "C-x C-d") 'helm-browse-project)
-
 ;; Windows swapping
 
 (defun rotate-windows (arg)
