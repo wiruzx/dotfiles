@@ -12,6 +12,7 @@
 
 ;; projectile
 
+(require 'ag)
 (require 'projectile)
 
 (projectile-mode t)

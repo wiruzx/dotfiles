@@ -52,3 +52,4 @@
 (depends-on "switch-window")
 (depends-on "expand-region")
 (depends-on "projectile")
+(depends-on "ag")
