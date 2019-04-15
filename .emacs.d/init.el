@@ -467,8 +467,7 @@
 (delete-selection-mode t)
 (setq max-lisp-eval-depth 10000)
 
-;; Automatic generated shit I have no idea about
-
+;; Generated
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
