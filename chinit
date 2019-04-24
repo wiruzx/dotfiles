@@ -7,9 +7,6 @@ main_repo=~/Developer/ios-workspace/badoo/alpha/
 cd $main_repo
 git worktree add ../$ticket_number
 cd ../$ticket_number
-./aida -ei CHAPIOS-$ticket_number
-open Chappy/Chappy.xcworkspace
+./aida -ei IOS-$ticket_number
 
-if [ "$2"  == "-c" ]; then
-    pwd | pbcopy
-fi
+pwd | pbcopy
