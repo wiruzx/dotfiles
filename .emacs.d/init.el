@@ -221,7 +221,7 @@
     ("4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" default)))
  '(package-selected-packages
    (quote
-    (protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell dumb-jump drag-stuff company-sourcekit ace-jump-mode)))
+    (protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell drag-stuff company-sourcekit ace-jump-mode)))
  '(safe-local-variable-values
    (quote
     ((org-todo-keyword-faces
@@ -288,17 +288,6 @@
 (require 'swift-project-settings)
 
 (setq swift-basic-offset 4)
-
-;; dumb-jump
-
-(require 'dumb-jump)
-
-(defun enable-dumb-jump ()
-  (dumb-jump-mode)
-  (local-set-key (kbd "M-.") 'dumb-jump-go))
-
-(add-hook 'swift-mode-hook 'enable-dumb-jump)
-(add-hook 'objc-mode-hook 'enable-dumb-jump)
 
 ;; Org mode
 
