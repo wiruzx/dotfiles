@@ -19,6 +19,9 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
+;; Fix backspace invoking help
+(global-set-key "\C-h" 'delete-backward-char)
+
 ;; expand-region
 
 (require 'expand-region)
