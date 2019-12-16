@@ -10,6 +10,23 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;; window size & position
+
+(if (display-graphic-p)
+    (progn
+      (setq initial-frame-alist
+            '(
+              (width . 130)
+              (height . 50)
+              (left . 100)
+              (right . 100)))
+      (setq default-frame-alist
+            '(
+              (width . 130)
+              (height . 50)
+              (left . 100)
+              (right . 100)))))
+
 ;; projectile
 
 (require 'ag)
