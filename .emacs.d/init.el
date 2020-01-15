@@ -10,6 +10,10 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;; Fix env
+
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+
 ;; window size & position
 
 (if (display-graphic-p)
