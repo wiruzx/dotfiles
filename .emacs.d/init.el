@@ -10,6 +10,14 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;; Haskell mode
+
+(add-hook 'haskell-mode-hook
+          (lambda ()
+            (set (make-local-variable 'company-backends)
+                 (append '((company-capf company-dabbrev-code))
+                         company-backends))))
+
 ;; Fix env
 
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
