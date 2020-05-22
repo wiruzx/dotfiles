@@ -8,3 +8,4 @@ cd $main_repo
 git worktree add ../$ticket_number --detach
 cd ../$ticket_number
 ./aida -ei IOS-$ticket_number
+pwd
