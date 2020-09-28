@@ -276,7 +276,12 @@
       (if-let ((issue-number (match-string 1 string)))
           (cons string issue-number))))
 
-(defvar org-link-recognizers '(jira-link-recognizer))
+(defun github-repo-link-recognizer (string)
+  (if (string-match "https?:\/\/github.com\/\\([a-zA-Z0-9_-]+\/[a-zA-Z0-9_-]+\\)\/?" string)
+      (if-let ((repo-name (match-string 1 string)))
+          (cons string repo-name))))
+
+(defvar org-link-recognizers '(jira-link-recognizer github-repo-link-recognizer))
 
 (defun find-recognizer (value recognizers)
   (if-let ((head (car recognizers)))
