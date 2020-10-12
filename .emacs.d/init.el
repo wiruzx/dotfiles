@@ -156,24 +156,6 @@
   (blink-cursor-mode 0)
   (setq-default line-spacing 2))
 
-;; Helm
-
-(require 'helm)
-(require 'helm-config)
-
-(helm-autoresize-mode 1)
-(setq helm-split-window-in-side-p 1)
-
-;; keybindings
-
-(defun last-thing-from-kill-ring ()
-  (substring-no-properties (car kill-ring)))
-
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
-;; this is old M-x
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
 ;; Windows swapping
 
 (defun rotate-windows (arg)
