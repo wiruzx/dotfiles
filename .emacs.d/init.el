@@ -10,6 +10,10 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;; Fix window buffer switching
+
+(setq ido-default-buffer-method 'samewindow)
+
 ;; Haskell mode
 
 (add-hook 'haskell-mode-hook
