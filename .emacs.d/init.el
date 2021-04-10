@@ -296,7 +296,7 @@
   (let ((clipboard (shell-command-to-string "pbpaste")))
     (if-let ((match (find-recognizer clipboard org-link-recognizers)))
         (insert (org-make-link-string (car match) (cdr match)))
-      (funcall-interactively (org-insert-link)))))
+      (funcall-interactively #'org-insert-link))))
 
 ;; Ace jump mode
 
