@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+NUMBER=$1
+HANDLE="IOS-$NUMBER"
+shift
+
+BRANCH=$(git branch --list -r "*$HANDLE*" | sed 's/^ *//g' | sed 's/ *$//g')
+
+git diff origin/master...$BRANCH $@

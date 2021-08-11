@@ -88,3 +88,5 @@ source $ZSH/oh-my-zsh.sh
 alias gla="glog --all"
 alias gdc="gd --cached"
 
+export BMBL="/Users/victorshamanov/Developer/ios-workspace/badoo/dev"
+export DVL="/Users/victorshamanov/Developer"

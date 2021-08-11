@@ -2,9 +2,7 @@
 
 ticket_number=$1
 
-main_repo=~/Developer/ios-workspace/badoo/dev/
-
-cd $main_repo
+cd $BMBL
 git worktree add ../$ticket_number --detach
 cd ../$ticket_number
 ./aida -ei IOS-$ticket_number
