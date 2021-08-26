@@ -218,15 +218,6 @@
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "C-j") 'company-complete-selection))
 
-;; company-sourcekit
-
-(require 'company-sourcekit)
-
-;; (setq company-sourcekit-use-yasnippet 1)
-;; (add-hook 'swift-mode-hook (lambda ()
-;;                           (set (make-local-variable 'company-backends) '(company-sourcekit))
-;;                           (company-mode)))
-
 ;; Spaces instead of tabs
 
 (custom-set-variables
