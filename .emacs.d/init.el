@@ -327,16 +327,6 @@
 
 (setq swift-basic-offset 4)
 
-;; Org mode
-
-(defun org-archive-all-done-tasks ()
-  (interactive)
-  (org-map-entries
-   (lambda ()
-     (org-archive-subtree)
-     (setq org-map-continue-from (outline-previous-heading)))
-   "/DONE" 'file))
-
 ;; Undo tree
 
 (require 'undo-tree)
