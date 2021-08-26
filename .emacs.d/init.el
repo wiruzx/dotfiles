@@ -337,12 +337,6 @@
      (setq org-map-continue-from (outline-previous-heading)))
    "/DONE" 'file))
 
-;; yasnippet
-
-;; (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
-;; (require 'yasnippet)
-;; (yas-global-mode 1)
-
 ;; Undo tree
 
 (require 'undo-tree)
