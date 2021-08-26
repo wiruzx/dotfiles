@@ -434,6 +434,10 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; Confirmation for killing emacs
+
+(setq confirm-kill-emacs 'y-or-n-p)
+
 ;; Kill this buffer instead of prompt
 
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
