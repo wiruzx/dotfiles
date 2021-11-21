@@ -6,3 +6,14 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 syntax on
+
+" FZF
+set rtp+=/usr/local/opt/fzf
+
+"Plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
