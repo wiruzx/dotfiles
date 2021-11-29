@@ -7,6 +7,9 @@ set shiftwidth=4
 set expandtab
 syntax on
 
+" Disable netrw help
+let g:netrw_banner=0
+
 " FZF
 set rtp+=/usr/local/opt/fzf
 
