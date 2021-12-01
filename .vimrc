@@ -7,6 +7,9 @@ set shiftwidth=4
 set expandtab
 syntax on
 
+"
+nnoremap <leader>bf :buffers<CR>:buffer
+
 " Disable netrw help
 let g:netrw_banner=0
 
