@@ -15,6 +15,10 @@ let g:netrw_banner=0
 
 " FZF
 set rtp+=/usr/local/opt/fzf
+nnoremap <leader>] :Bu<CR>
+nnoremap <leader>[ :Files<CR>
+nnoremap <leader>ag :Ag 
+
 
 "Plugins
 call plug#begin('~/.vim/plugged')
