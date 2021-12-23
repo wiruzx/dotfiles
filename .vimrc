@@ -17,7 +17,7 @@ let g:netrw_banner=0
 set rtp+=/usr/local/opt/fzf
 nnoremap <leader>] :Bu<CR>
 nnoremap <leader>[ :Files<CR>
-nnoremap <leader>ag :Ag 
+nnoremap <leader>a :Ag 
 
 
 "Plugins
