@@ -10,6 +10,9 @@ syntax on
 " Defaults
 source $VIMRUNTIME/defaults.vim
 
+" Show line number by default
+set nu
+
 " A better %
 packadd! matchit
 
