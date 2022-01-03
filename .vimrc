@@ -68,6 +68,9 @@ fun! Runcmd(cmd)
 endfun
 com! -nargs=1 Runcmd :call Runcmd("<args>")
 
+" No wrap!
+set nowrap
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
