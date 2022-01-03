@@ -24,9 +24,10 @@ let g:netrw_banner=0
 
 " FZF
 set rtp+=/usr/local/opt/fzf
-nnoremap <C-j> :Bu<CR>
-nnoremap <C-k> :GFiles<CR>
-nnoremap <C-h> :Ag
+
+nnoremap <Space>j :Bu<CR>
+nnoremap <Space>k :GFiles<CR>
+nnoremap <Space>a :Ag
 
 " An easy way to leave insert mode
 inoremap jj <ESC>
