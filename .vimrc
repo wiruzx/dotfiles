@@ -25,7 +25,7 @@ let g:netrw_banner=0
 " FZF
 set rtp+=/usr/local/opt/fzf
 
-nnoremap <Space>j :Bu<CR>
+nnoremap <Space>j :Buffers<CR>
 nnoremap <Space>k :GFiles<CR>
 nnoremap <Space>a :Ag<Space>
 
