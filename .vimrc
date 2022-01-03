@@ -54,6 +54,10 @@ set nowrapscan
 " Save on S
 nnoremap S :w<CR>
 
+" Golden Ratio
+" let g:golden_ratio_autocommand = 0
+noremap <Space>g :GoldenRatioToggle<CR>
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
