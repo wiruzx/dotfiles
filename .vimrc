@@ -50,6 +50,9 @@ set hlsearch
 set incsearch
 set nowrapscan
 
+" Save on S
+nnoremap S :w<CR>
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
