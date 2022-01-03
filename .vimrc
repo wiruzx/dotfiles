@@ -58,6 +58,16 @@ nnoremap S :w<CR>
 " let g:golden_ratio_autocommand = 0
 noremap <Space>g :GoldenRatioToggle<CR>
 
+" Show command output in quickfix window
+fun! Runcmd(cmd)
+    silent! exe "noautocmd botright pedit ".a:cmd
+    noautocmd wincmd P
+    set buftype=nofile
+    exe "noautocmd r! ".a:cmd
+    noautocmd wincmd p
+endfun
+com! -nargs=1 Runcmd :call Runcmd("<args>")
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
