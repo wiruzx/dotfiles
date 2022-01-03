@@ -27,7 +27,7 @@ set rtp+=/usr/local/opt/fzf
 
 nnoremap <Space>j :Bu<CR>
 nnoremap <Space>k :GFiles<CR>
-nnoremap <Space>a :Ag
+nnoremap <Space>a :Ag<Space>
 
 " An easy way to leave insert mode
 inoremap jj <ESC>
