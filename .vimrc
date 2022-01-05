@@ -85,6 +85,15 @@ nnoremap b :lprev<CR>
 nnoremap p :cprev<CR>
 nnoremap n :cnext<CR>
 
+
+" Tabs management
+
+nnoremap h :tabprev<CR>
+nnoremap l :tabnext<CR>
+nnoremap H :-tabmove<CR>
+nnoremap L :+tabmove<CR>
+nnoremap <Space>nt :tabe<CR>
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
