@@ -82,10 +82,10 @@ set nowrap
 
 nnoremap QL :lopen<CR>
 nnoremap QQ :copen<CR>
-nnoremap f :lnext<CR>
-nnoremap b :lprev<CR>
-nnoremap p :cprev<CR>
-nnoremap n :cnext<CR>
+nnoremap f :lnext<CR>zz
+nnoremap b :lprev<CR>zz
+nnoremap p :cprev<CR>zz
+nnoremap n :cnext<CR>zz
 
 " Tabs management
 
