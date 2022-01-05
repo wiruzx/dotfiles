@@ -94,8 +94,8 @@ set nowrap
 
 " Quick fix list keybindings
 
-nnoremap <Space>ll :lopen<CR>
-nnoremap <Space>ql :copen<CR>
+nnoremap QL :lopen<CR>
+nnoremap QQ :copen<CR>
 nnoremap f :lnext<CR>
 nnoremap b :lprev<CR>
 nnoremap p :cprev<CR>
