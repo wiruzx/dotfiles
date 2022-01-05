@@ -76,6 +76,15 @@ com! -nargs=1 Runcmd :call Runcmd("<args>")
 " No wrap!
 set nowrap
 
+" Quick fix list keybindings
+
+nnoremap l :lopen<CR>
+nnoremap c :copen<CR>
+nnoremap f :lnext<CR>
+nnoremap b :lprev<CR>
+nnoremap p :cprev<CR>
+nnoremap n :cnext<CR>
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
