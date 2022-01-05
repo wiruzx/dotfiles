@@ -27,7 +27,7 @@ let g:netrw_liststyle = 2
 " FZF
 set rtp+=/usr/local/opt/fzf
 
-let g:fzf_layout = { 'down': '20%' }
+let g:fzf_layout = { 'down': '40%' }
 
 " An action can be a reference to a function that processes selected lines
 function! s:build_quickfix_list(lines)
@@ -37,13 +37,14 @@ function! s:build_quickfix_list(lines)
 endfunction
 
 let g:fzf_action = {
-  \ 'ctrl-q': function('s:build_quickfix_list'),
+  \ 'alt-q': function('s:build_quickfix_list'),
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
 nnoremap <Space>j :Buffers<CR>
 nnoremap <Space>k :GFiles<CR>
+nnoremap <Space>f :Files<CR>
 nnoremap <Space>a :Ag<Space>
 
 " An easy way to leave insert mode
