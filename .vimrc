@@ -19,8 +19,10 @@ packadd! matchit
 " Shortcut for dealing buffers without additional plugins
 nnoremap <leader>bf :buffers<CR>:buffer
 
-" Disable netrw help
-let g:netrw_banner=0
+" Netrw setup
+let g:netrw_banner = 0
+let g:netrw_altfile = 1
+let g:netrw_liststyle = 2
 
 " FZF
 set rtp+=/usr/local/opt/fzf
