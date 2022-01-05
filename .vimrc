@@ -73,7 +73,7 @@ nnoremap S :w<CR>
 nnoremap <Space><Space> :noh<CR>
 
 " Golden Ratio
-" let g:golden_ratio_autocommand = 0
+let g:golden_ratio_autocommand = 0
 noremap <Space>g :GoldenRatioToggle<CR>
 
 " Show command output in quickfix window
