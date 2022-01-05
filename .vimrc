@@ -95,6 +95,9 @@ nnoremap H :-tabmove<CR>
 nnoremap L :+tabmove<CR>
 nnoremap <Space>nt :tabe<CR>
 
+" Colorscheme
+colorscheme gruvbox8
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
