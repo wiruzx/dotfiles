@@ -75,6 +75,10 @@ nnoremap S :w<CR>
 " Space Space
 nnoremap <Space><Space> :noh<CR>
 
+" Golden Ratio
+let g:golden_ratio_autocommand = 0
+noremap <Space>g :GoldenRatioToggle<CR>
+
 " No wrap!
 set nowrap
 
@@ -103,5 +107,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'roman/golden-ratio'
 
 call plug#end()
