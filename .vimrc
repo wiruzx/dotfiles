@@ -27,6 +27,8 @@ let g:netrw_liststyle = 2
 " FZF
 set rtp+=/usr/local/opt/fzf
 
+let g:fzf_layout = { 'down': '20%' }
+
 " An action can be a reference to a function that processes selected lines
 function! s:build_quickfix_list(lines)
   call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
