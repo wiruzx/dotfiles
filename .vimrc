@@ -51,8 +51,8 @@ nnoremap <Space>a :Ag<Space>
 inoremap jj <ESC>
 
 " Commands for inserting empty lines
-nnoremap <C-p> O<Esc>
-nnoremap <C-n> o<Esc>
+nnoremap <Space>O O<Esc>
+nnoremap <Space>o o<Esc>
 
 " Hide unopened buffers
 set hidden
@@ -79,16 +79,6 @@ nnoremap <Space><Space> :noh<CR>
 let g:golden_ratio_autocommand = 0
 noremap <Space>g :GoldenRatioToggle<CR>
 
-" Show command output in quickfix window
-fun! Runcmd(cmd)
-    silent! exe "noautocmd botright pedit ".a:cmd
-    noautocmd wincmd P
-    set buftype=nofile
-    exe "noautocmd r! ".a:cmd
-    noautocmd wincmd p
-endfun
-com! -nargs=1 Runcmd :call Runcmd("<args>")
-
 " No wrap!
 set nowrap
 
@@ -100,7 +90,6 @@ nnoremap f :lnext<CR>
 nnoremap b :lprev<CR>
 nnoremap p :cprev<CR>
 nnoremap n :cnext<CR>
-
 
 " Tabs management
 
