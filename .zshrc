@@ -89,4 +89,8 @@ alias gla="glog --all"
 alias gdc="gd --cached"
 
 export BMBL="/Users/victorshamanov/Developer/ios-workspace/badoo/dev"
+export CHTT="/Users/victorshamanov/Developer/ios-workspace/Chatto"
 export DVL="/Users/victorshamanov/Developer"
+export DOT="/Users/victorshamanov/Developer/other/dotfiles/"
+export IOS="/Users/victorshamanov/Developer/ios-workspace/"
+
