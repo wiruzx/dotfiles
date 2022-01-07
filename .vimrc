@@ -99,6 +99,10 @@ nnoremap H :-tabmove<CR>
 nnoremap L :+tabmove<CR>
 nnoremap <Space>nt :tabe<CR>
 
+" Terminal hotkey
+
+nnoremap <Space>tt :term<CR>
+
 " Colorscheme
 colorscheme gruvbox8
 
