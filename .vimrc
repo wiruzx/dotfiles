@@ -106,6 +106,10 @@ nnoremap <Space>tt :term<CR>
 " Colorscheme
 colorscheme gruvbox8
 
+" Change the default splits
+
+set splitbelow splitright
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
