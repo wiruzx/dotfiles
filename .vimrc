@@ -108,11 +108,10 @@ nnoremap K <C-w>K
 " Splitting
 nnoremap s <C-w>s
 nnoremap v <C-w>v
-
-" Closing
 nnoremap c <C-w>c
+nnoremap o <C-w>o
 
-" Maximizing
+" Resizing
 nnoremap \ <C-w>_ <C-w>\|
 nnoremap = <C-w>=
 
