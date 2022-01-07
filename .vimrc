@@ -91,6 +91,31 @@ nnoremap b :lprev<CR>zz
 nnoremap p :cprev<CR>zz
 nnoremap n :cnext<CR>zz
 
+" Windows Management
+
+" Jumping
+nnoremap l <C-w>l
+nnoremap h <C-w>h
+nnoremap j <C-w>j
+nnoremap k <C-w>k
+
+" Moving
+nnoremap L <C-w>L
+nnoremap H <C-w>H
+nnoremap J <C-w>J
+nnoremap K <C-w>K
+
+" Splitting
+nnoremap s <C-w>s
+nnoremap v <C-w>v
+
+" Closing
+nnoremap c <C-w>c
+
+" Maximizing
+nnoremap \ <C-w>_ <C-w>\|
+nnoremap = <C-w>=
+
 " Tabs management
 
 nnoremap h :tabprev<CR>
