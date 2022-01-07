@@ -130,6 +130,10 @@ nnoremap <Space>tt :term<CR>
 " Colorscheme
 colorscheme gruvbox8
 
+" Jump to the last insert
+noremap <Space>i '^
+noremap <Space>I '.
+
 " Change the default splits
 
 set splitbelow splitright
