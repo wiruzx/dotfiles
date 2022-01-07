@@ -98,6 +98,8 @@ nnoremap l <C-w>l
 nnoremap h <C-w>h
 nnoremap j <C-w>j
 nnoremap k <C-w>k
+nnoremap w <C-w><C-w>
+nnoremap q <C-w>W
 
 " Moving
 nnoremap L <C-w>L
