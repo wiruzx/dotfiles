@@ -118,10 +118,10 @@ nnoremap = <C-w>=
 
 " Tabs management
 
-nnoremap [ :tabprev<CR>
-nnoremap ] :tabnext<CR>
-nnoremap { :-tabmove<CR>
-nnoremap } :+tabmove<CR>
+nnoremap , :tabprev<CR>
+nnoremap . :tabnext<CR>
+nnoremap < :-tabmove<CR>
+nnoremap > :+tabmove<CR>
 nnoremap <Space>nt :tabe<CR>
 
 " Terminal hotkey
