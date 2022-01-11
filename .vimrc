@@ -108,6 +108,11 @@ nnoremap k <C-w>k
 nnoremap w <C-w><C-w>
 nnoremap q <C-w>W
 
+nnoremap <C-j> 6j
+nnoremap <C-k> 6k
+nnoremap <C-h> 12h
+nnoremap <C-l> 12l
+
 " Moving
 nnoremap L <C-w>L
 nnoremap H <C-w>H
