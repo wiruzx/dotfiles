@@ -21,8 +21,7 @@ nnoremap <leader>bf :buffers<CR>:buffer
 
 " Netrw setup
 let g:netrw_banner = 0
-let g:netrw_altfile = 1
-let g:netrw_liststyle = 2
+let g:netrw_liststyle = 3
 
 " FZF
 set rtp+=/usr/local/opt/fzf
