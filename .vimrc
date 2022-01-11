@@ -112,7 +112,7 @@ nnoremap J <C-w>J
 nnoremap K <C-w>K
 
 " Splitting
-nnoremap s <C-w>s
+nnoremap x <C-w>s
 nnoremap v <C-w>v
 nnoremap c <C-w>c
 nnoremap o <C-w>o
@@ -120,6 +120,10 @@ nnoremap o <C-w>o
 " Resizing
 nnoremap \ <C-w>_ <C-w>\|
 nnoremap = <C-w>=
+nnoremap <Up> :resize +5<CR>
+nnoremap <Down> :resize -5<CR>
+nnoremap <Left> :vertical resize -5<CR>
+nnoremap <Right> :vertical resize +5<CR>
 
 " Tabs management
 
