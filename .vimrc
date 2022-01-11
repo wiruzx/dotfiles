@@ -45,6 +45,8 @@ nnoremap <Space>j :Buffers<CR>
 nnoremap <Space>k :GFiles<CR>
 nnoremap <Space>f :Files<CR>
 nnoremap <Space>a :Ag<Space>
+nnoremap <Space>a :Ag<Space>
+nnoremap <Space>ga :Ag<Space><CR>
 
 " An easy way to leave insert mode
 inoremap jj <ESC>
