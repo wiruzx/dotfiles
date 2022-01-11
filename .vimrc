@@ -10,6 +10,9 @@ syntax on
 " Defaults
 source $VIMRUNTIME/defaults.vim
 
+" Wildmenu
+set wildmenu
+
 " Show line number by default
 set nu
 
