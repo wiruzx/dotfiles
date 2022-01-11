@@ -13,6 +13,9 @@ source $VIMRUNTIME/defaults.vim
 " Wildmenu
 set wildmenu
 
+" Relative line numbers
+set relativenumber
+
 " Show line number by default
 set nu
 
