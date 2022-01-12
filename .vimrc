@@ -156,6 +156,14 @@ noremap <Space>I '.
 
 set splitbelow splitright
 
+" Insert space
+nnoremap <Space>s i<Space><Esc>
+nnoremap <Space>S a<Space><Esc>
+
+" Split the line
+
+nnoremap <Space>x i<CR><Esc>
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
