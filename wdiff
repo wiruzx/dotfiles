@@ -1,9 +1,32 @@
 #!/usr/bin/env bash
 
-NUMBER=$1
-HANDLE="IOS-$NUMBER"
-shift
+OTHER_ARGUMENTS=()
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -w|--write)
+            WRITE_TO_FILE=1
+            shift
+            ;;
+        *)
+            if test $PARSED_POSITIONAL; then
+                OTHER_ARGUMENTS+=("$1")
+            else
+                NUMBER=$1
+                HANDLE="IOS-$NUMBER"
+                PARSED_POSITIONAL=1
+            fi
+            shift
+            ;;
+    esac
+done
 
 BRANCH=$(git branch --list -r "*$HANDLE*" | sed 's/^ *//g' | sed 's/ *$//g')
 
-git diff origin/master...$BRANCH $@
+COMMAND="git diff origin/master...$BRANCH ${OTHER_ARGUMENTS[*]}"
+
+if test $WRITE_TO_FILE; then
+    COMMAND+=" > $HANDLE.diff"
+fi
+
+eval $COMMAND
