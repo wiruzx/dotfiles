@@ -5,7 +5,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;; (package-initialize)
 
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
@@ -156,7 +156,7 @@
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
   (set-fringe-mode '(4 . 0))
-  (set-default-font "-*-Hack-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+  ;;(set-default-font "-*-Hack-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")
   (blink-cursor-mode 0)
   (setq-default line-spacing 2))
 
@@ -193,8 +193,8 @@
 
 ;; hydras
 
-(load "~/.emacs.d/hydras/window")
-(global-set-key (kbd "C-c w") 'hydra-window/body)
+;; (load "~/.emacs.d/hydras/window")
+;; (global-set-key (kbd "C-c w") 'hydra-window/body)
 
 ;; scratch buffer
 
