@@ -28,7 +28,6 @@ nnoremap <leader>bf :buffers<CR>:buffer
 " Netrw setup
 let g:netrw_banner = 0
 let g:netrw_liststyle = 2
-let g:netrw_altfile = 1
 
 " FZF
 set rtp+=/usr/local/opt/fzf
@@ -164,6 +163,11 @@ nnoremap <Space>S a<Space><Esc>
 " Split the line
 
 nnoremap <Space>x i<CR><Esc>
+
+" Copy current file path, name
+
+nnoremap <Space>cf :let @" = expand("%:t")<CR>
+nnoremap <Space>cp :let @" = expand("%")<CR>
 
 " Plugins
 call plug#begin('~/.vim/plugged')
