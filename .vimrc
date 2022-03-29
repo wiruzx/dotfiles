@@ -175,6 +175,7 @@ set updatetime=100
 
 nnoremap <Space>gg :GitGutterToggle<CR>
 nnoremap <Space>gs :GitGutterStage<CR>
+nnoremap <Space>gu :GitGutterUndoHunk<CR>
 nnoremap <Space>gl :GitGutterLineHighlightsToggle<CR>
 
 " Plugins
