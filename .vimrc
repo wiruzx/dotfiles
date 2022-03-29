@@ -84,7 +84,7 @@ nnoremap <Space><Space> :noh<CR>
 
 " Golden Ratio
 let g:golden_ratio_autocommand = 0
-noremap <Space>g :GoldenRatioToggle<CR>
+noremap <Space>gr :GoldenRatioToggle<CR>
 
 " No wrap!
 set nowrap
@@ -168,6 +168,14 @@ nnoremap <Space>x i<CR><Esc>
 
 nnoremap <Space>cf :let @" = expand("%:t")<CR>
 nnoremap <Space>cp :let @" = expand("%")<CR>
+
+" Git gutter setup
+
+set updatetime=100
+
+nnoremap <Space>gg :GitGutterToggle<CR>
+nnoremap <Space>gs :GitGutterStage<CR>
+nnoremap <Space>gl :GitGutterLineHighlightsToggle<CR>
 
 " Plugins
 call plug#begin('~/.vim/plugged')
