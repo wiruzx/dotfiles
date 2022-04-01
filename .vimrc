@@ -56,6 +56,7 @@ nnoremap <Space>ga :Ag<Space><CR>
 
 " An easy way to leave insert mode
 inoremap jj <ESC>
+inoremap ff <ESC>
 
 " Commands for inserting empty lines
 nnoremap <Space>O O<Esc>
