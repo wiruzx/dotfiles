@@ -179,6 +179,11 @@ nnoremap <Space>gs :GitGutterStage<CR>
 nnoremap <Space>gu :GitGutterUndoHunk<CR>
 nnoremap <Space>gl :GitGutterLineHighlightsToggle<CR>
 
+" Insert mode emacs's support
+
+inoremap <C-a> <C-o>0
+inoremap <C-e> <C-o>$
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
