@@ -1,9 +1,27 @@
 #!/usr/bin/env bash
 
-ticket_number=$1
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -c|--copy)
+            COPY_TO_CLIPBOARD=1
+            shift
+            ;;
+        *)
+            TICKET_NUMBER=$1
+            HANDLE="IOS-$TICKET_NUMBER"
+            shift
+            ;;
+    esac
+done
 
 cd $BMBL
-git worktree add ../$ticket_number --detach
-cd ../$ticket_number
-./aida -ei IOS-$ticket_number
-pwd
+git worktree add ../$TICKET_NUMBER --detach
+cd ../$TICKET_NUMBER
+./aida -ei $HANDLE
+
+if test $COPY_TO_CLIPBOARD; then
+    pwd | pbcopy
+else
+    pwd
+fi
+
