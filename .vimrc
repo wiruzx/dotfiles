@@ -184,6 +184,11 @@ nnoremap <Space>gl :GitGutterLineHighlightsToggle<CR>
 inoremap <C-a> <C-o>0
 inoremap <C-e> <C-o>$
 
+" Bookmarks setup
+
+let g:bookmark_save_per_working_dir = 1
+let g:bookmark_auto_save = 1
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
@@ -191,5 +196,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'roman/golden-ratio'
 Plug 'airblade/vim-gitgutter'
+Plug 'MattesGroeger/vim-bookmarks'
 
 call plug#end()
