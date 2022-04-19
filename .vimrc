@@ -173,11 +173,11 @@ nnoremap <Space>cp :let @" = expand("%")<CR>
 " Git gutter setup
 
 set updatetime=100
+let g:gitgutter_signs = 0
 
-nnoremap <Space>gg :GitGutterToggle<CR>
 nnoremap <Space>gs :GitGutterStage<CR>
 nnoremap <Space>gu :GitGutterUndoHunk<CR>
-nnoremap <Space>gl :GitGutterLineHighlightsToggle<CR>
+nnoremap <Space>gg :GitGutterLineHighlightsToggle<CR>
 
 " Insert mode emacs's support
 
