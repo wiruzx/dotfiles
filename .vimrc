@@ -179,7 +179,6 @@ nnoremap <Space>tt :term<CR>
 " Accessing buffer in terminal mode
 
 tnoremap  <C-w>"0
-tnoremap  <C-w>"
 
 " Leaving everything
 
