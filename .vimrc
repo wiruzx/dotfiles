@@ -176,8 +176,11 @@ tnoremap > <C-w>:+tabmove<CR>
 
 nnoremap <Space>tt :term<CR>
 
-" Terminal
+" Leaving everything
 
+inoremap  <C-\><C-n>
+tnoremap  <C-\><C-n>
+cnoremap  <C-\><C-n>
 
 " Colorscheme
 colorscheme gruvbox8
