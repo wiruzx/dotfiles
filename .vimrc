@@ -108,10 +108,14 @@ nnoremap k <C-w>k
 nnoremap w <C-w><C-w>
 nnoremap q <C-w>W
 
-nnoremap <C-j> 6j
-nnoremap <C-k> 6k
-nnoremap <C-h> 12h
-nnoremap <C-l> 12l
+" Jumping in terminal
+
+tnoremap l <C-w>l
+tnoremap h <C-w>h
+tnoremap j <C-w>j
+tnoremap k <C-w>k
+tnoremap w <C-w><C-w>
+tnoremap q <C-w>W
 
 " Moving
 nnoremap L <C-w>L
@@ -119,11 +123,24 @@ nnoremap H <C-w>H
 nnoremap J <C-w>J
 nnoremap K <C-w>K
 
+" Moving in terminal
+tnoremap L <C-w>L
+tnoremap H <C-w>H
+tnoremap J <C-w>J
+tnoremap K <C-w>K
+
 " Splitting
 nnoremap x <C-w>s
 nnoremap v <C-w>v
 nnoremap c <C-w>c
 nnoremap o <C-w>o
+
+" Splitting in terminal
+tnoremap x <C-w>s
+tnoremap v <C-w>v
+tnoremap c <C-w>c
+tnoremap o <C-w>o
+
 
 " Resizing
 nnoremap \ <C-w>_ <C-w>\|
@@ -133,17 +150,34 @@ nnoremap <Down> :resize -5<CR>
 nnoremap <Left> :vertical resize -5<CR>
 nnoremap <Right> :vertical resize +5<CR>
 
+" Resizing in terminal
+tnoremap \ <C-w>_ <C-w>\|
+tnoremap = <C-w>=
+tnoremap <Up> <C-w>:resize +5<CR>
+tnoremap <Down> <C-w>:resize -5<CR>
+tnoremap <Left> <C-w>:vertical resize -5<CR>
+tnoremap <Right> <C-w>:vertical resize +5<CR>
+
 " Tabs management
+nnoremap <Space>nt :tabe<CR>
 
 nnoremap , :tabprev<CR>
 nnoremap . :tabnext<CR>
 nnoremap < :-tabmove<CR>
 nnoremap > :+tabmove<CR>
-nnoremap <Space>nt :tabe<CR>
+
+" Tabs management in terminal
+tnoremap , <C-w>:tabprev<CR>
+tnoremap . <C-w>:tabnext<CR>
+tnoremap < <C-w>:-tabmove<CR>
+tnoremap > <C-w>:+tabmove<CR>
 
 " Terminal hotkey
 
 nnoremap <Space>tt :term<CR>
+
+" Terminal
+
 
 " Colorscheme
 colorscheme gruvbox8
@@ -182,6 +216,14 @@ nnoremap <Space>gg :GitGutterLineHighlightsToggle<CR>
 
 inoremap <C-a> <C-o>0
 inoremap <C-e> <C-o>$
+
+" Control-jumps
+
+nnoremap <C-j> 6j
+nnoremap <C-k> 6k
+nnoremap <C-h> 12h
+nnoremap <C-l> 12l
+
 
 " Bookmarks setup
 
