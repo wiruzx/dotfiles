@@ -187,6 +187,11 @@ inoremap  <C-\><C-n>
 tnoremap  <C-\><C-n>
 cnoremap  <C-\><C-n>
 
+" Accessing command and search history
+
+noremap <Space>; q:
+noremap <Space>/ q/
+
 " Colorscheme
 colorscheme gruvbox8
 
