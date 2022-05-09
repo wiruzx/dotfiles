@@ -33,7 +33,8 @@ let mapleader = " "
 " FZF
 set rtp+=/usr/local/opt/fzf
 
-let g:fzf_layout = { 'down': '40%' }
+let g:fzf_layout = { 'down': '100%' }
+let g:fzf_preview_window = [ 'up:50%' ]
 
 " An action can be a reference to a function that processes selected lines
 function! s:build_quickfix_list(lines)
