@@ -51,7 +51,10 @@ let g:fzf_action = {
 " TODO: Change letters
 nnoremap <leader>bf :Buffers<CR>
 nnoremap <leader>ps :GFiles<CR>
+nnoremap <leader>gf :GFiles?<CR>
 nnoremap <leader>fs :Files<CR>
+nnoremap <leader>ls :Lines<CR>
+nnoremap <leader>bs :BLines<CR>
 nnoremap <leader>ag :Ag<Space>
 nnoremap <leader>ga :Ag<Space><CR>
 
