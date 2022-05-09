@@ -22,12 +22,13 @@ set nu
 " A better %
 packadd! matchit
 
-" Shortcut for dealing buffers without additional plugins
-nnoremap <leader>bf :buffers<CR>:buffer
-
 " Netrw setup
 let g:netrw_banner = 0
 let g:netrw_liststyle = 2
+
+" Leader
+
+let mapleader = " "
 
 " FZF
 set rtp+=/usr/local/opt/fzf
@@ -47,19 +48,19 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-nnoremap <Space>j :Buffers<CR>
-nnoremap <Space>k :GFiles<CR>
-nnoremap <Space>f :Files<CR>
-nnoremap <Space>a :Ag<Space>
-nnoremap <Space>a :Ag<Space>
-nnoremap <Space>ga :Ag<Space><CR>
+" TODO: Change letters
+nnoremap <leader>bf :Buffers<CR>
+nnoremap <leader>ps :GFiles<CR>
+nnoremap <leader>fs :Files<CR>
+nnoremap <leader>ag :Ag<Space>
+nnoremap <leader>ga :Ag<Space><CR>
 
 " An easy way to leave insert mode
 inoremap jj <ESC>
 
 " Commands for inserting empty lines
-nnoremap <Space>O O<Esc>
-nnoremap <Space>o o<Esc>
+nnoremap <leader>O O<Esc>
+nnoremap <leader>o o<Esc>
 
 " Hide unopened buffers
 set hidden
@@ -80,11 +81,11 @@ set nowrapscan
 nnoremap S :w<CR>
 
 " Space Space
-nnoremap <Space><Space> :noh<CR>
+nnoremap <leader><leader> :noh<CR>
 
 " Golden Ratio
 let g:golden_ratio_autocommand = 0
-noremap <Space>gr :GoldenRatioToggle<CR>
+noremap <leader>gr :GoldenRatioToggle<CR>
 
 " No wrap!
 set nowrap
@@ -159,7 +160,7 @@ tnoremap <Left> <C-w>:vertical resize -5<CR>
 tnoremap <Right> <C-w>:vertical resize +5<CR>
 
 " Tabs management
-nnoremap <Space>nt :tabe<CR>
+nnoremap <leader>nt :tabe<CR>
 
 nnoremap , :tabprev<CR>
 nnoremap . :tabnext<CR>
@@ -174,7 +175,7 @@ tnoremap > <C-w>:+tabmove<CR>
 
 " Terminal hotkey
 
-nnoremap <Space>tt :term<CR>
+nnoremap <leader>te :term<CR>
 
 " Accessing buffer in terminal mode
 
@@ -188,41 +189,37 @@ cnoremap  <C-\><C-n>
 
 " Accessing command and search history
 
-noremap <Space>; q:
-noremap <Space>/ q/
+noremap <leader>; q:
+noremap <leader>/ q/
 
 " Colorscheme
 colorscheme gruvbox8
-
-" Jump to the last insert
-noremap <Space>i '^
-noremap <Space>I '.
 
 " Change the default splits
 
 set splitbelow splitright
 
 " Insert space
-nnoremap <Space>s i<Space><Esc>
-nnoremap <Space>S a<Space><Esc>
+nnoremap <Leader>s i<Space><Esc>
+nnoremap <Leader>S a<Space><Esc>
 
 " Split the line
 
-nnoremap <Space>x i<CR><Esc>
+nnoremap <leader>x i<CR><Esc>
 
 " Copy current file path, name
 
-nnoremap <Space>cf :let @" = expand("%:t")<CR>
-nnoremap <Space>cp :let @" = expand("%")<CR>
+nnoremap <leader>cf :let @" = expand("%:t")<CR>
+nnoremap <leader>cp :let @" = expand("%")<CR>
 
 " Git gutter setup
 
 set updatetime=100
 let g:gitgutter_signs = 0
 
-nnoremap <Space>gs :GitGutterStage<CR>
-nnoremap <Space>gu :GitGutterUndoHunk<CR>
-nnoremap <Space>gg :GitGutterLineHighlightsToggle<CR>
+nnoremap <leader>gs :GitGutterStage<CR>
+nnoremap <leader>gu :GitGutterUndoHunk<CR>
+nnoremap <leader>gl :GitGutterLineHighlightsToggle<CR>
 
 " Insert mode emacs's support
 
