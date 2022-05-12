@@ -225,6 +225,10 @@ nnoremap <leader>gs :GitGutterStage<CR>
 nnoremap <leader>gu :GitGutterUndoHunk<CR>
 nnoremap <leader>gl :GitGutterLineHighlightsToggle<CR>
 
+" Diff
+nnoremap <leader>dt :difft<CR>
+nnoremap <leader>do :diffoff<CR>
+
 " Insert mode emacs's support
 
 inoremap <C-a> <C-o>0
@@ -236,7 +240,6 @@ nnoremap <C-j> 6j
 nnoremap <C-k> 6k
 nnoremap <C-h> 12h
 nnoremap <C-l> 12l
-
 
 " Bookmarks setup
 
