@@ -256,5 +256,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'roman/golden-ratio'
 Plug 'airblade/vim-gitgutter'
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'idbrii/vim-argedit'
 
 call plug#end()
