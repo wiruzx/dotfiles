@@ -23,6 +23,9 @@ syntax on
 " Fix cursor
 set guicursor=
 
+" Fix closing terminal for neovim
+autocmd TermClose * execute 'bdelete! ' . expand('<abuf>')
+
 " Setup wildmenu
 set wildmenu
 set wildmode=longest,full
