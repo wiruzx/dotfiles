@@ -7,6 +7,8 @@ set shiftwidth=4
 set expandtab
 syntax on
 
+set path+=**
+
 " Defaults
 source $VIMRUNTIME/defaults.vim
 
