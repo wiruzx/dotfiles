@@ -120,84 +120,84 @@ set nowrap
 
 nnoremap QL :lopen<CR>
 nnoremap QQ :copen<CR>
-nnoremap p :lprev<CR>
-nnoremap n :lnext<CR>
-nnoremap b :cprev<CR>
-nnoremap f :cnext<CR>
+nnoremap <Esc>p :lprev<CR>
+nnoremap <Esc>n :lnext<CR>
+nnoremap <Esc>b :cprev<CR>
+nnoremap <Esc>f :cnext<CR>
 
 " Windows Management
 
 " Jumping
-nnoremap l <C-w>l
-nnoremap h <C-w>h
-nnoremap j <C-w>j
-nnoremap k <C-w>k
-nnoremap w <C-w><C-w>
-nnoremap q <C-w>W
+nnoremap <Esc>l <C-w>l
+nnoremap <Esc>h <C-w>h
+nnoremap <Esc>j <C-w>j
+nnoremap <Esc>k <C-w>k
+nnoremap <Esc>w <C-w><C-w>
+nnoremap <Esc>q <C-w>W
 
 " Jumping in terminal
 
-tnoremap l <C-w>l
-tnoremap h <C-w>h
-tnoremap j <C-w>j
-tnoremap k <C-w>k
-tnoremap w <C-w><C-w>
-tnoremap q <C-w>W
+tnoremap <Esc>l <C-w>l
+tnoremap <Esc>h <C-w>h
+tnoremap <Esc>j <C-w>j
+tnoremap <Esc>k <C-w>k
+tnoremap <Esc>w <C-w><C-w>
+tnoremap <Esc>q <C-w>W
 
 " Moving
-nnoremap L <C-w>L
-nnoremap H <C-w>H
-nnoremap J <C-w>J
-nnoremap K <C-w>K
+nnoremap <Esc>L <C-w>L
+nnoremap <Esc>H <C-w>H
+nnoremap <Esc>J <C-w>J
+nnoremap <Esc>K <C-w>K
 
 " Moving in terminal
-tnoremap L <C-w>L
-tnoremap H <C-w>H
-tnoremap J <C-w>J
-tnoremap K <C-w>K
+tnoremap <Esc>L <C-w>L
+tnoremap <Esc>H <C-w>H
+tnoremap <Esc>J <C-w>J
+tnoremap <Esc>K <C-w>K
 
 " Splitting
-nnoremap x <C-w>s
-nnoremap v <C-w>v
-nnoremap c <C-w>c
-nnoremap o <C-w>o
+nnoremap <Esc>x <C-w>s
+nnoremap <Esc>v <C-w>v
+nnoremap <Esc>c <C-w>c
+nnoremap <Esc>o <C-w>o
 
 " Splitting in terminal
-tnoremap x <C-w>s
-tnoremap v <C-w>v
-tnoremap c <C-w>c
-tnoremap o <C-w>o
+tnoremap <Esc>x <C-w>s
+tnoremap <Esc>v <C-w>v
+tnoremap <Esc>c <C-w>c
+tnoremap <Esc>o <C-w>o
 
 
 " Resizing
-nnoremap \ <C-w>_ <C-w>\|
-nnoremap = <C-w>=
-nnoremap <Up> :resize +5<CR>
-nnoremap <Down> :resize -5<CR>
-nnoremap <Left> :vertical resize -5<CR>
-nnoremap <Right> :vertical resize +5<CR>
+nnoremap <Esc>\ <C-w>_ <C-w>\|
+nnoremap <Esc>= <C-w>=
+nnoremap <Esc><Up> :resize +5<CR>
+nnoremap <Esc><Down> :resize -5<CR>
+nnoremap <Esc><Left> :vertical resize -5<CR>
+nnoremap <Esc><Right> :vertical resize +5<CR>
 
 " Resizing in terminal
-tnoremap \ <C-w>_ <C-w>\|
-tnoremap = <C-w>=
-tnoremap <Up> <C-w>:resize +5<CR>
-tnoremap <Down> <C-w>:resize -5<CR>
-tnoremap <Left> <C-w>:vertical resize -5<CR>
-tnoremap <Right> <C-w>:vertical resize +5<CR>
+tnoremap <Esc>\ <C-w>_ <C-w>\|
+tnoremap <Esc>= <C-w>=
+tnoremap <Esc><Up> <C-w>:resize +5<CR>
+tnoremap <Esc><Down> <C-w>:resize -5<CR>
+tnoremap <Esc><Left> <C-w>:vertical resize -5<CR>
+tnoremap <Esc><Right> <C-w>:vertical resize +5<CR>
 
 " Tabs management
 nnoremap <leader>nt :tabe<CR>
 
-nnoremap , :tabprev<CR>
-nnoremap . :tabnext<CR>
-nnoremap < :-tabmove<CR>
-nnoremap > :+tabmove<CR>
+nnoremap <Esc>, :tabprev<CR>
+nnoremap <Esc>. :tabnext<CR>
+nnoremap <Esc>< :-tabmove<CR>
+nnoremap <Esc>> :+tabmove<CR>
 
 " Tabs management in terminal
-tnoremap , <C-w>:tabprev<CR>
-tnoremap . <C-w>:tabnext<CR>
-tnoremap < <C-w>:-tabmove<CR>
-tnoremap > <C-w>:+tabmove<CR>
+tnoremap <Esc>, <C-w>:tabprev<CR>
+tnoremap <Esc>. <C-w>:tabnext<CR>
+tnoremap <Esc>< <C-w>:-tabmove<CR>
+tnoremap <Esc>> <C-w>:+tabmove<CR>
 
 " Terminal hotkey
 
