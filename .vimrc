@@ -20,6 +20,8 @@ endif
 
 " Wildmenu
 set wildmenu
+set wildchar=<C-e>
+set wildignore+=**/.git/*
 
 " Relative line numbers
 set relativenumber
