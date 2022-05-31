@@ -249,13 +249,6 @@ nnoremap <C-k> 6k
 nnoremap <C-h> 12h
 nnoremap <C-l> 12l
 
-" Bookmarks setup
-
-let g:bookmark_save_per_working_dir = 1
-let g:bookmark_auto_save = 1
-let g:bookmark_sign = '=>'
-let g:bookmark_display_annotation = 1
-
 " Plugins
 call plug#begin('~/.vim/plugged')
 
@@ -263,7 +256,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'roman/golden-ratio'
 Plug 'airblade/vim-gitgutter'
-Plug 'MattesGroeger/vim-bookmarks'
 Plug 'idbrii/vim-argedit'
 
 call plug#end()
