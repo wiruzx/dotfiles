@@ -10,6 +10,12 @@ syntax on
 " Defaults
 source $VIMRUNTIME/defaults.vim
 
+" Change grep to ag
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor\ --vimgrep
+    set grepformat^=%f:%l:%c:%m
+endif
+
 " Wildmenu
 set wildmenu
 
