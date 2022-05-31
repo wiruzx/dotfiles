@@ -7,11 +7,8 @@ set shiftwidth=4
 set expandtab
 syntax on
 
-" Defaults
-source $VIMRUNTIME/defaults.vim
-
-" Wildmenu
-set wildmenu
+" Change neovim defaults
+set ruler!
 
 " Relative line numbers
 set relativenumber
@@ -66,9 +63,6 @@ inoremap jj <ESC>
 nnoremap <leader>O O<Esc>
 nnoremap <leader>o o<Esc>
 
-" Hide unopened buffers
-set hidden
-
 " Highlight cursor position
 set cul
 set culopt=number
@@ -77,8 +71,6 @@ set culopt=number
 map ' `
 
 " Setup search
-set hlsearch
-set incsearch
 set nowrapscan
 
 " Save on S
