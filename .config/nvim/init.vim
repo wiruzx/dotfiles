@@ -24,7 +24,14 @@ syntax on
 set guicursor=
 
 " Fix closing terminal for neovim
-autocmd TermClose * execute 'bdelete! ' . expand('<abuf>')
+if has('nvim')
+    autocmd TermClose * execute 'bdelete! ' . expand('<abuf>')
+endif
+
+"Fix openning terminal in insert mode
+if has('nvim')
+    autocmd TermOpen term://* startinsert
+endif
 
 " Setup wildmenu
 set wildmenu
