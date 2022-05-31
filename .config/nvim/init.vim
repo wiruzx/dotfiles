@@ -23,6 +23,11 @@ syntax on
 " Fix cursor
 set guicursor=
 
+" Disable lines in terminal
+if has('nvim')
+    autocmd TermOpen * setlocal nonumber norelativenumber
+endif
+
 " Fix closing terminal for neovim
 if has('nvim')
     autocmd TermClose * execute 'bdelete! ' . expand('<abuf>')
