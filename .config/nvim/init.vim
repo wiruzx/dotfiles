@@ -20,8 +20,15 @@ set shiftwidth=4
 set expandtab
 syntax on
 
-" Change neovim defaults
-set ruler!
+" Fix cursor
+set guicursor=
+
+" Setup wildmenu
+set wildmenu
+set wildmode=longest,full
+set wildchar=<C-e>
+
+set wildignore+=**/.git/*
 
 " Relative line numbers
 set relativenumber
