@@ -191,7 +191,7 @@ tnoremap > <C-w>:+tabmove<CR>
 
 " Terminal hotkey
 
-nnoremap <leader>te :term<CR>
+nnoremap <leader>te :split \| term<CR>
 
 " Accessing buffer in terminal mode
 
