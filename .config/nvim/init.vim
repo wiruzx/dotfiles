@@ -1,3 +1,16 @@
+" Plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'roman/golden-ratio'
+Plug 'airblade/vim-gitgutter'
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'idbrii/vim-argedit'
+Plug 'gruvbox-community/gruvbox'
+
+call plug#end()
+
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -189,7 +202,7 @@ noremap <leader>; q:
 noremap <leader>/ q/
 
 " Colorscheme
-colorscheme gruvbox8
+colorscheme gruvbox
 
 " Change the default splits
 
@@ -240,14 +253,3 @@ let g:bookmark_auto_save = 1
 let g:bookmark_sign = '=>'
 let g:bookmark_display_annotation = 1
 
-" Plugins
-call plug#begin('~/.vim/plugged')
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'roman/golden-ratio'
-Plug 'airblade/vim-gitgutter'
-Plug 'MattesGroeger/vim-bookmarks'
-Plug 'idbrii/vim-argedit'
-
-call plug#end()
