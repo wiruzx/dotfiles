@@ -231,7 +231,7 @@ let g:gitgutter_signs = 0
 
 nnoremap <leader>gs :GitGutterStage<CR>
 nnoremap <leader>gu :GitGutterUndoHunk<CR>
-nnoremap <leader>gl :GitGutterLineHighlightsToggle<CR>
+nnoremap <leader>gl :GitGutterSignsToggle<CR>
 
 " Diff
 nnoremap <leader>dt :difft<CR>
