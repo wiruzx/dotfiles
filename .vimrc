@@ -22,6 +22,9 @@ endif
 set wildmenu
 set wildchar=<C-e>
 set wildignore+=**/.git/*
+set wildignore+=UIGallery/**
+set wildignore+=**/generated/**
+set wildignore+=**/Generated/**
 
 " Relative line numbers
 set relativenumber
