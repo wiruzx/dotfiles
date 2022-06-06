@@ -23,3 +23,6 @@ export CHTT="$HOME/Developer/ios/Chatto"
 export DVL="$HOME/Developer"
 export DOT="$HOME/Developer/other/dotfiles/"
 export IOS="$HOME/Developer/ios/"
+
+# Emacs cask
+export PATH="/Users/viktorshamanov/.cask/bin:$PATH"
