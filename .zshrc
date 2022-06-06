@@ -25,4 +25,4 @@ export DOT="$HOME/Developer/other/dotfiles/"
 export IOS="$HOME/Developer/ios/"
 
 # Emacs cask
-export PATH="/Users/viktorshamanov/.cask/bin:$PATH"
+export PATH="$HOME/.cask/bin:$PATH"
