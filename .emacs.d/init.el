@@ -8,7 +8,7 @@
 ;; (package-initialize)
 
 (require 'cask "~/.cask/cask.el")
-(cask-initialize)
+(cask--initialize)
 
 ;; Fix window buffer switching
 
