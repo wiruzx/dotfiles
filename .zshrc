@@ -18,7 +18,7 @@ bindkey '^v' edit-command-line
 alias gla="glog --all"
 alias gdc="gd --cached"
 
-export BMBL="$HOME/Developer/ios/badoo/master"
+export BMBL="$HOME/Developer/ios/bumble/master"
 export CHTT="$HOME/Developer/ios/Chatto"
 export DVL="$HOME/Developer"
 export DOT="$HOME/Developer/other/dotfiles/"
