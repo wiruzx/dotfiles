@@ -7,7 +7,7 @@
 ;; You may delete these explanatory comments.
 ;; (package-initialize)
 
-(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+(require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
 ;; Fix window buffer switching
