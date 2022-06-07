@@ -9,6 +9,9 @@ syntax on
 
 set path+=**
 
+" Dark background by default
+set bg=dark
+
 " Defaults
 source $VIMRUNTIME/defaults.vim
 
