@@ -12,6 +12,12 @@ set path+=**
 " Dark background by default
 set bg=dark
 
+" Setup mouse mode
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
+
 " Defaults
 source $VIMRUNTIME/defaults.vim
 
