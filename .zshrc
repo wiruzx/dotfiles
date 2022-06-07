@@ -20,6 +20,7 @@ alias gdc="gd --cached"
 
 export ICLD="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
 export BMBL="$HOME/Developer/ios/bumble/master"
+export BMB="$HOME/Developer/ios/bumble"
 export CHTT="$HOME/Developer/ios/Chatto"
 export DVL="$HOME/Developer"
 export DOT="$HOME/Developer/other/dotfiles"
