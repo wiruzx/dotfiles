@@ -21,7 +21,7 @@ alias gdc="gd --cached"
 export BMBL="$HOME/Developer/ios/bumble/master"
 export CHTT="$HOME/Developer/ios/Chatto"
 export DVL="$HOME/Developer"
-export DOT="$HOME/Developer/other/dotfiles/"
+export DOT="$HOME/Developer/other/dotfiles"
 export IOS="$HOME/Developer/ios/"
 
 # Emacs cask
