@@ -2,7 +2,6 @@
 (source melpa)
 
 (depends-on "multi-term")
-(depends-on "powerline")
 (depends-on "hydra")
 (depends-on "company")
 
