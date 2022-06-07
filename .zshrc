@@ -18,6 +18,7 @@ bindkey '^v' edit-command-line
 alias gla="glog --all"
 alias gdc="gd --cached"
 
+export ICLD="$HOME/Library/Mobile Documents/com~apple~CloudDocs/"
 export BMBL="$HOME/Developer/ios/bumble/master"
 export CHTT="$HOME/Developer/ios/Chatto"
 export DVL="$HOME/Developer"
