@@ -26,3 +26,6 @@ export IOS="$HOME/Developer/ios/"
 
 # Emacs cask
 export PATH="$HOME/.cask/bin:$PATH"
+
+# Pyenv support
+eval "$(pyenv init -)"
