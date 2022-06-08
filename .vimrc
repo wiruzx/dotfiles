@@ -9,6 +9,9 @@ syntax on
 
 set path+=**
 
+" Disable swap files
+set noswapfile
+
 " Dark background by default
 set bg=dark
 
