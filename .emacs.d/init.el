@@ -10,6 +10,10 @@
 (require 'cask "~/.cask/cask.el")
 (cask--initialize)
 
+;; Change set mark shortcut
+
+(global-set-key (kbd "M-SPC") 'set-mark-command)
+
 ;; Fix window buffer switching
 
 (setq ido-default-buffer-method 'samewindow)
