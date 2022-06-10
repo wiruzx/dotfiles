@@ -14,6 +14,7 @@
 (depends-on "undo-tree")
 
 (depends-on "zenburn-theme" :git "https://github.com/bbatsov/zenburn-emacs" :ref "master")
+(depends-on "gruvbox-theme")
 
 (depends-on "bind-key")
 (depends-on "cask")
