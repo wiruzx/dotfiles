@@ -373,13 +373,6 @@
             (setq org-clock-into-drawer t)
             (org-indent-mode t)))
 
-;; swift-mode
-
-(require 'swift-mode)
-(require 'swift-project-settings)
-
-(setq swift-basic-offset 4)
-
 ;; Undo tree
 
 (require 'undo-tree)
