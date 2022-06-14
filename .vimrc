@@ -9,6 +9,10 @@ syntax on
 
 set path+=**
 
+" Clipboard
+
+set clipboard=unnamed
+
 " Disable swap files
 set noswapfile
 
