@@ -31,3 +31,6 @@ export PATH="$HOME/.cask/bin:$PATH"
 
 # Pyenv support
 eval "$(pyenv init -)"
+
+# Use brew ctags
+alias ctags="`brew --prefix`/bin/ctags"

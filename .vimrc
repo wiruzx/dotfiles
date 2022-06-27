@@ -9,6 +9,9 @@ syntax on
 
 set path+=**
 
+" Tags
+set tags=tags
+
 " Clipboard
 
 set clipboard=unnamed
