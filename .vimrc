@@ -196,8 +196,6 @@ tnoremap <Left> <C-w>:vertical resize -5<CR>
 tnoremap <Right> <C-w>:vertical resize +5<CR>
 
 " Tabs management
-nnoremap <leader>nt :tabe<CR>
-
 nnoremap , :tabprev<CR>
 nnoremap . :tabnext<CR>
 nnoremap < :-tabmove<CR>
@@ -273,6 +271,14 @@ nnoremap <C-k> 6k
 nnoremap <C-h> 12h
 nnoremap <C-l> 12l
 
+" EasyMotion
+
+let g:EasyMotion_do_mapping = 0
+
+nmap f <Plug>(easymotion-s)
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
@@ -281,5 +287,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'roman/golden-ratio'
 Plug 'airblade/vim-gitgutter'
 Plug 'idbrii/vim-argedit'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
