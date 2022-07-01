@@ -46,7 +46,7 @@ set wildignore+=**/generated/**
 set wildignore+=**/Generated/**
 
 " Relative line numbers
-set relativenumber
+" set relativenumber
 
 " Show line number by default
 set nu
