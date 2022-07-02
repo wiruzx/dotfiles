@@ -9,6 +9,9 @@ syntax on
 
 set path+=**
 
+" Map Backspace to C-^
+noremap <Backspace> <C-^>
+
 " Tags
 set tags=tags
 
