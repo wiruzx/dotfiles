@@ -10,6 +10,11 @@
 (require 'cask "~/.cask/cask.el")
 (cask--initialize)
 
+;; Org capture
+
+(setq org-directory "~/Developer/badoo-journal")
+(setq org-inbox-file (concat org-directory "/inbox.org"))
+
 ;; Change set mark shortcut
 
 (global-set-key (kbd "M-SPC") 'set-mark-command)
@@ -362,6 +367,10 @@
   t)
 
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
+(global-set-key (kbd "C-c c") (lambda () (interactive) (org-capture nil "t")))
+
+(setq org-capture-templates '(("t" "TODO" entry (file org-inbox-file) "* TODO %?")))
 
 (add-hook 'org-mode-hook
           (lambda ()
