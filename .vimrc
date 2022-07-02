@@ -278,13 +278,13 @@ nnoremap <C-l> 12l
 
 let g:EasyMotion_do_mapping = 0
 
-vmap f <Plug>(easymotion-s)
-vmap J <Plug>(easymotion-j)
-vmap K <Plug>(easymotion-k)
+vmap , <Plug>(easymotion-s)
+vmap <leader>j <Plug>(easymotion-j)
+vmap <leader>k <Plug>(easymotion-k)
 
-nmap f <Plug>(easymotion-s)
-nmap J <Plug>(easymotion-j)
-nmap K <Plug>(easymotion-k)
+nmap , <Plug>(easymotion-s)
+nmap <leader>j <Plug>(easymotion-j)
+nmap <leader>k <Plug>(easymotion-k)
 
 " Plugins
 call plug#begin('~/.vim/plugged')
