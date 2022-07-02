@@ -275,6 +275,10 @@ nnoremap <C-l> 12l
 
 let g:EasyMotion_do_mapping = 0
 
+vmap f <Plug>(easymotion-s)
+vmap <Leader>j <Plug>(easymotion-j)
+vmap <Leader>k <Plug>(easymotion-k)
+
 nmap f <Plug>(easymotion-s)
 nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
