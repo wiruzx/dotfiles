@@ -9,6 +9,11 @@ syntax on
 
 set path+=**
 
+" Switch between buffers
+
+noremap + :bnext<CR>
+noremap _ :bprevious<CR>
+
 " Map Backspace to C-^
 noremap <Backspace> <C-^>
 
