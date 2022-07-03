@@ -26,6 +26,8 @@ export DVL="$HOME/Developer"
 export DOT="$HOME/Developer/other/dotfiles"
 export IOS="$HOME/Developer/ios/"
 
+alias tre="tree -L 2"
+
 # Emacs cask
 export PATH="$HOME/.cask/bin:$PATH"
 
