@@ -104,16 +104,19 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 " TODO: Change letters
-nnoremap <leader>bf :Buffers<CR>
-nnoremap <leader>ps :GFiles<CR>
-nnoremap <leader>gf :GFiles?<CR>
-nnoremap <leader>fs :Files<CR>
-nnoremap <leader>ls :Lines<CR>
-nnoremap <leader>bs :BLines<CR>
-nnoremap <leader>ag :Ag<Space>
-nnoremap <leader>ga :Ag<Space><CR>
-nnoremap <leader>tt :Tags<CR>
-nnoremap <leader>bt :BTags<CR>
+nnoremap <leader>jf :Buffers<CR>
+nnoremap <leader>jd :Tags<CR>
+nnoremap <leader>js :BTags<CR>
+
+nnoremap <leader>fj :GFiles<CR>
+nnoremap <leader>fl :GFiles?<CR>
+nnoremap <leader>fk :Files<CR>
+
+nnoremap <leader>ld :Lines<CR>
+nnoremap <leader>lf :BLines<CR>
+
+" nnoremap <leader>ag :Ag<Space>
+" nnoremap <leader>ga :Ag<Space><CR>
 
 " An easy way to leave insert mode
 inoremap jj <ESC>
@@ -233,7 +236,8 @@ tnoremap > <C-w>:+tabmove<CR>
 
 " Terminal hotkey
 
-nnoremap <leader>te :term<CR>
+" nnoremap <leader>te :term<CR>
+nnoremap <leader>dj :term<CR>
 
 " Accessing buffer in terminal mode
 
@@ -247,8 +251,8 @@ cnoremap  <C-\><C-n>
 
 " Accessing command and search history
 
-noremap <leader>; q:
-noremap <leader>/ q/
+noremap <leader>dk q:
+noremap <leader>dl q/
 
 " Colorscheme
 colorscheme gruvbox8
@@ -290,10 +294,10 @@ inoremap <C-e> <C-o>$
 
 " Control-jumps
 
-nnoremap <C-j> 6j
-nnoremap <C-k> 6k
-nnoremap <C-h> 12h
-nnoremap <C-l> 12l
+" nnoremap <C-j> 6j
+" nnoremap <C-k> 6k
+" nnoremap <C-h> 12h
+" nnoremap <C-l> 12l
 
 " EasyMotion
 
@@ -301,13 +305,21 @@ let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_smartsign_us = 1
 
-vmap <leader>i <Plug>(easymotion-s)
-vmap <leader>j <Plug>(easymotion-j)
-vmap <leader>k <Plug>(easymotion-k)
+vmap <leader>s <Plug>(easymotion-s2)
+vmap <C-j> <Plug>(easymotion-j)
+vmap <C-k> <Plug>(easymotion-k)
+vmap <C-h> <Plug>(easymotion-b)
+vmap <C-l> <Plug>(easymotion-w)
 
-nmap <leader>i <Plug>(easymotion-s)
-nmap <leader>j <Plug>(easymotion-j)
-nmap <leader>k <Plug>(easymotion-k)
+nmap <leader>s <Plug>(easymotion-s2)
+nmap <C-j> <Plug>(easymotion-j)
+nmap <C-k> <Plug>(easymotion-k)
+nmap <C-h> <Plug>(easymotion-b)
+nmap <C-l> <Plug>(easymotion-w)
+
+" nmap <leader>i <Plug>(easymotion-s)
+" nmap <leader>j <Plug>(easymotion-j)
+" nmap <leader>k <Plug>(easymotion-k)
 
 " quick-scope
 
