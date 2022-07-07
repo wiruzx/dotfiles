@@ -309,9 +309,14 @@ nmap <leader>i <Plug>(easymotion-s)
 nmap <leader>j <Plug>(easymotion-j)
 nmap <leader>k <Plug>(easymotion-k)
 
+" quick-scope
+
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'unblevable/quick-scope'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'roman/golden-ratio'
