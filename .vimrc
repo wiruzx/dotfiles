@@ -298,6 +298,8 @@ nnoremap <C-l> 12l
 " EasyMotion
 
 let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_smartsign_us = 1
 
 vmap <leader>i <Plug>(easymotion-s)
 vmap <leader>j <Plug>(easymotion-j)
