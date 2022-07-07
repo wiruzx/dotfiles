@@ -1,12 +1,11 @@
 --langdef=Swift
 --langmap=Swift:+.swift
---regex-swift=/[[:<:]]enum[ \t]+([^\{\}]+).*$/\1/n,enum,enums/
---regex-swift=/[[:<:]]typealias[ \t]+([^:=]+).*$/\1/t,typealias,typealiases/
---regex-swift=/[[:<:]]protocol[ \t]+([^:\{]+).*$/\1/p,protocol,protocols/
---regex-swift=/[[:<:]]struct[ \t]+([^:\{]+).*$/\1/s,struct,structs/
---regex-swift=/[[:<:]]class[ \t]+([^:\{]+).*$/\1/c,class,classes/
---regex-swift=/[[:<:]]func[ \t]+([^\(\)]+)\([^\(\)]*\)/\1/f,function,functions/
---regex-swift=/[[:<:]]extension[ \t]+([^:\{]+).*$/\1/e,extension,extensions/
+--regex-swift=/[[:<:]]enum[ \t]+([^\{\}<: ]+).*$/\1/n,enum,enums/
+--regex-swift=/[[:<:]]typealias[ \t]+([^:=< ]+).*$/\1/t,typealias,typealiases/
+--regex-swift=/[[:<:]]protocol[ \t]+([^:\{< ]+).*$/\1/p,protocol,protocols/
+--regex-swift=/[[:<:]]struct[ \t]+([^:\{< ]+).*$/\1/s,struct,structs/
+--regex-swift=/[[:<:]]class[ \t]+([^:\{< ]+).*$/\1/c,class,classes/
+--regex-swift=/[[:<:]]func[ \t]+([^\(\)<]+)\([^\(\)]*\)/\1/f,function,functions/
 --exclude=.git
 --exclude=scripts
 --exclude=docs
@@ -14,3 +13,4 @@
 --exclude=*.bundle
 --exclude=*/Resources/Languages
 --exclude=*/Resources/Assets
+--exclude=ThirdParty
