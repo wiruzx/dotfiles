@@ -112,6 +112,8 @@ nnoremap <leader>ls :Lines<CR>
 nnoremap <leader>bs :BLines<CR>
 nnoremap <leader>ag :Ag<Space>
 nnoremap <leader>ga :Ag<Space><CR>
+nnoremap <leader>tt :Tags<CR>
+nnoremap <leader>bt :BTags<CR>
 
 " An easy way to leave insert mode
 inoremap jj <ESC>
