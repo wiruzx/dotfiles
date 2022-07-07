@@ -297,11 +297,11 @@ nnoremap <C-l> 12l
 
 let g:EasyMotion_do_mapping = 0
 
-vmap , <Plug>(easymotion-s)
+vmap <leader>i <Plug>(easymotion-s)
 vmap <leader>j <Plug>(easymotion-j)
 vmap <leader>k <Plug>(easymotion-k)
 
-nmap , <Plug>(easymotion-s)
+nmap <leader>i <Plug>(easymotion-s)
 nmap <leader>j <Plug>(easymotion-j)
 nmap <leader>k <Plug>(easymotion-k)
 
