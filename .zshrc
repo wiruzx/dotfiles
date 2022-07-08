@@ -36,3 +36,7 @@ eval "$(pyenv init -)"
 
 # Use brew ctags
 alias ctags="`brew --prefix`/bin/ctags"
+
+# Setup fzf
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
