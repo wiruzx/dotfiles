@@ -60,6 +60,7 @@ endif
 
 " Wildmenu
 set wildmenu
+set wildoptions=pum
 set wildmode=full:lastused
 set wildignore+=**/.git/*
 set wildignore+=UIGallery/**
