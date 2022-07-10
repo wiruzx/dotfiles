@@ -6,6 +6,7 @@
 --regex-swift=/[[:<:]]struct[ \t]+([^:\{< ]+).*$/\1/s,struct,structs/
 --regex-swift=/[[:<:]]class[ \t]+([^:\{< ]+).*$/\1/c,class,classes/
 --regex-swift=/[[:<:]]func[ \t]+([^\(\)<]+)\([^\(\)]*\)/\1/f,function,functions/
+--regex-swift=/(var|let)[ \t]+([a-zA-Z0-9_]+)/\2/v,variable,variables/
 --exclude=.git
 --exclude=scripts
 --exclude=docs
