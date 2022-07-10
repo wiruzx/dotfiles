@@ -369,6 +369,8 @@
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 (global-set-key (kbd "C-c c") (lambda () (interactive) (org-capture nil "t")))
+(global-set-key (kbd "C-c l") #'org-store-link)
+(global-set-key (kbd "C-c a") #'org-agenda)
 
 (setq org-capture-templates '(("t" "TODO" entry (file org-inbox-file) "* TODO %?")))
 
@@ -376,7 +378,6 @@
           (lambda ()
             ;; When org-mode starts it (org-mode-map) overrides the ace-jump-mode.
             (local-set-key (kbd "\C-c SPC") 'ace-jump-mode)
-            (local-set-key (kbd "\C-c a") 'org-agenda)
             (local-set-key (kbd "C-c C-l") 'org-insert-link-interceptor)
             (org-bullets-mode t)
             (setq org-clock-into-drawer t)
