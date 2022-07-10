@@ -85,7 +85,7 @@ let g:netrw_liststyle = 2
 let mapleader = " "
 
 " FZF
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/bin/fzf
 
 let g:fzf_layout = { 'down': '100%' }
 let g:fzf_preview_window = [ 'up:50%,border-horizontal' ]
