@@ -264,15 +264,12 @@ colorscheme gruvbox8
 set splitbelow splitright
 
 " Insert space
-nnoremap <Leader>s i<Space><Esc>
-nnoremap <Leader>S a<Space><Esc>
+nnoremap <Leader>ps i<Space><Esc>
 
 " Split the line
-
-nnoremap <leader>x i<CR><Esc>
+nnoremap <leader>px i<CR><Esc>
 
 " Copy current file path, name
-
 nnoremap <leader>cf :let @" = expand("%:t")<CR>
 nnoremap <leader>cp :let @" = expand("%")<CR>
 
