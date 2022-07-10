@@ -98,7 +98,7 @@ function! s:build_quickfix_list(lines)
 endfunction
 
 let g:fzf_action = {
-  \ 'alt-q': function('s:build_quickfix_list'),
+  \ 'alt-c': function('s:build_quickfix_list'),
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
