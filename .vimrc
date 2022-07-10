@@ -103,7 +103,7 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-command! -bang ProjectFiles call fzf#vim#files('.', {'source': "fd '\.swift$' --type f --ignore-file ~/.projectignore"}, <bang>0)
+command! -bang ProjectFiles call fzf#vim#files('.', fzf#vim#with_preview({'source': "fd '\.swift$' --type f --ignore-file ~/.projectignore" }), <bang>0)
 
 " TODO: Change letters
 nnoremap <leader>jf :Buffers<CR>
