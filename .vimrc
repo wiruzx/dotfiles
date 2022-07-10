@@ -103,14 +103,16 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
+command! -bang ProjectFiles call fzf#vim#files('.', {'source': "fd '\.swift$' --type f --ignore-file ~/.projectignore"}, <bang>0)
+
 " TODO: Change letters
 nnoremap <leader>jf :Buffers<CR>
 nnoremap <leader>jd :Tags<CR>
 nnoremap <leader>js :BTags<CR>
 
-nnoremap <leader>fj :GFiles<CR>
-nnoremap <leader>fl :GFiles?<CR>
-nnoremap <leader>fk :Files<CR>
+nnoremap <leader>fj :ProjectFiles<CR>
+nnoremap <leader>fk :GFiles<CR>
+nnoremap <leader>fl :Files<CR>
 
 nnoremap <leader>ld :Lines<CR>
 nnoremap <leader>lf :BLines<CR>
