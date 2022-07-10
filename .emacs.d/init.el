@@ -380,6 +380,7 @@
             ;; When org-mode starts it (org-mode-map) overrides the ace-jump-mode.
             (local-set-key (kbd "\C-c SPC") 'ace-jump-mode)
             (local-set-key (kbd "C-c C-l") 'org-insert-link-interceptor)
+            (setq-local org-complete-tags-always-offer-all-agenda-tags t)
             (org-bullets-mode t)
             (setq org-clock-into-drawer t)
             (org-indent-mode t)))
