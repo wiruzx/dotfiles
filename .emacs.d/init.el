@@ -293,19 +293,20 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" default)))
+   '("4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" default))
+ '(git-gutter:added-sign "+")
+ '(git-gutter:deleted-sign "-")
+ '(git-gutter:modified-sign "~")
+ '(org-agenda-files
+   '("/Users/viktorshamanov/Developer/badoo-journal/today.org" "/Users/viktorshamanov/Developer/badoo-journal/next.org" "/Users/viktorshamanov/Developer/badoo-journal/inbox.org" "/Users/viktorshamanov/Developer/badoo-journal/suspended.org" "/Users/viktorshamanov/Developer/badoo-journal/backlog.org"))
  '(package-selected-packages
-   (quote
-    (protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell drag-stuff company-sourcekit ace-jump-mode)))
+   '(protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell drag-stuff company-sourcekit ace-jump-mode))
  '(safe-local-variable-values
-   (quote
-    ((org-todo-keyword-faces
+   '((org-todo-keyword-faces
       ("HOLD" . "yellow")
-      ("SUSPENDED" . "grey")))))
+      ("SUSPENDED" . "grey"))))
  '(tab-stop-list
-   (quote
-    (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120)))
+   '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120))
  '(tab-width 4))
 
 (setq-default indent-tabs-mode nil)
