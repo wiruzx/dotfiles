@@ -282,9 +282,6 @@
 
 (add-to-list 'company-backends '(company-capf company-dabbrev))
 
-(with-eval-after-load 'company
-  (define-key company-active-map (kbd "C-j") 'company-complete-selection))
-
 ;; Spaces instead of tabs
 
 (custom-set-variables
@@ -514,8 +511,6 @@
 (setq inhibit-startup-message t)
 
 ;; Other stuff
-
-(global-set-key (kbd "C-j") #'newline-and-indent)
 
 (delete-selection-mode t)
 (setq max-lisp-eval-depth 10000)
