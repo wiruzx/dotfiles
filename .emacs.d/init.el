@@ -41,14 +41,14 @@
     (progn
       (setq initial-frame-alist
             '(
-              (width . 130)
-              (height . 50)
+              (width . 85)
+              (height . 25)
               (left . 100)
               (right . 100)))
       (setq default-frame-alist
             '(
-              (width . 130)
-              (height . 50)
+              (width . 85)
+              (height . 25)
               (left . 100)
               (right . 100)))))
 
