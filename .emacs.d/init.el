@@ -14,6 +14,8 @@
 
 (setq org-directory "~/Developer/badoo-journal")
 (setq org-inbox-file (concat org-directory "/inbox.org"))
+(setq org-agenda-text-search-extra-files
+      (directory-files (concat org-directory "/journal") t "\.org$"))
 
 ;; Change set mark shortcut
 
