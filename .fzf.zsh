@@ -108,5 +108,11 @@ _fzf_compgen_dir() {
 
 # Appearance
 # ----------
-export FZF_DEFAULT_OPTS="--height=40% --no-clear --bind 'alt-a:select-all,alt-d:deselect-all,ctrl-l:page-down,ctrl-h:page-up,alt-h:first,alt-l:last'"
-
+export FZF_DEFAULT_OPTS="--height=40% --no-clear --bind '\
+alt-a:select-all,\
+alt-d:deselect-all,\
+alt-j:page-down,\
+alt-k:page-up,\
+alt-l:first,\
+alt-h:last\
+'"
