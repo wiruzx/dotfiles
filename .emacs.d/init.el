@@ -297,7 +297,7 @@
  '(git-gutter:deleted-sign "-")
  '(git-gutter:modified-sign "~")
  '(org-agenda-files
-   '("/Users/viktorshamanov/Developer/badoo-journal/today.org" "/Users/viktorshamanov/Developer/badoo-journal/next.org" "/Users/viktorshamanov/Developer/badoo-journal/inbox.org" "/Users/viktorshamanov/Developer/badoo-journal/suspended.org" "/Users/viktorshamanov/Developer/badoo-journal/backlog.org"))
+   '("/Users/viktorshamanov/Developer/badoo-journal/today.org" "/Users/viktorshamanov/Developer/badoo-journal/next.org" "/Users/viktorshamanov/Developer/badoo-journal/inbox.org" "/Users/viktorshamanov/Developer/badoo-journal/suspended.org" "/Users/viktorshamanov/Developer/badoo-journal/backlog.org" "/Users/viktorshamanov/Developer/badoo-journal/notes.org"))
  '(package-selected-packages
    '(protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell drag-stuff company-sourcekit ace-jump-mode))
  '(safe-local-variable-values
