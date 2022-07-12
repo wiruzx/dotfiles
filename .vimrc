@@ -9,6 +9,9 @@ syntax on
 
 set path+=**
 
+" Search of word under the cursor
+nnoremap ga :Ag<Space><CR>
+
 " Xcodebuild error format
 set errorformat=
 			\%f:%l:%c:{%*[^}]}:\ error:\ %m,
@@ -116,9 +119,6 @@ nnoremap <leader>fl :Files<CR>
 
 nnoremap <leader>ld :Lines<CR>
 nnoremap <leader>lf :BLines<CR>
-
-" nnoremap <leader>ag :Ag<Space>
-" nnoremap <leader>ga :Ag<Space><CR>
 
 " An easy way to leave insert mode
 inoremap jj <ESC>
