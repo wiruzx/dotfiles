@@ -136,7 +136,7 @@ map ' `
 
 " Setup search
 set nohlsearch
-set incsearch
+set noincsearch
 set nowrapscan
 
 " Save on S
