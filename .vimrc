@@ -135,7 +135,7 @@ set culopt=number
 map ' `
 
 " Setup search
-set hlsearch
+set nohlsearch
 set incsearch
 set nowrapscan
 
