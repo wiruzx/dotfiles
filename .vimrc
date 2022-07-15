@@ -24,11 +24,11 @@ set errorformat=
 
 " Switch between buffers
 
-noremap + :bnext<CR>
-noremap _ :bprevious<CR>
+nnoremap + :bnext<CR>
+nnoremap _ :bprevious<CR>
 
 " Map Backspace to C-^
-noremap <Backspace> <C-^>
+nnoremap <Backspace> <C-^>
 
 " Tags
 set tags=tags
@@ -147,7 +147,7 @@ nnoremap <leader><leader> :noh<CR>
 
 " Golden Ratio
 let g:golden_ratio_autocommand = 0
-noremap <leader>gr :GoldenRatioToggle<CR>
+nnoremap <leader>gr :GoldenRatioToggle<CR>
 
 " No wrap!
 set nowrap
@@ -178,8 +178,8 @@ cnoremap  <C-\><C-n>
 
 " Accessing command and search history
 
-noremap <leader>dk q:
-noremap <leader>dl q/
+nnoremap <leader>dk q:
+nnoremap <leader>dl q/
 
 " Colorscheme
 colorscheme gruvbox8
