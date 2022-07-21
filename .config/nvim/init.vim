@@ -57,6 +57,9 @@ if executable('ag')
     set grepformat^=%f:%l:%c:%m
 endif
 
+" Fix cursor
+set guicursor=
+
 " Wildmenu
 set wildmenu
 set wildoptions=pum
