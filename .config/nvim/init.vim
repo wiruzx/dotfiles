@@ -90,7 +90,12 @@ set relativenumber
 " Show line number by default
 set nu
 
-"
+
+
+" Fix plug
+set rtp+=~/.vim/
+
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 
