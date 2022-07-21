@@ -60,6 +60,16 @@ endif
 " Fix cursor
 set guicursor=
 
+" Fix closing terminal for neovim
+if has('nvim')
+    autocmd TermClose * execute 'bdelete! ' . expand('<abuf>')
+endif
+
+"Fix openning terminal in insert mode
+if has('nvim')
+    autocmd TermOpen term://* startinsert
+endif
+
 " Wildmenu
 set wildmenu
 set wildoptions=pum
