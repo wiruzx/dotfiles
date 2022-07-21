@@ -180,10 +180,10 @@ set nowrap
 
 nnoremap QL :lopen<CR>
 nnoremap QQ :copen<CR>
-nnoremap p :lprev<CR>
-nnoremap n :lnext<CR>
-nnoremap b :cprev<CR>
-nnoremap f :cnext<CR>
+nnoremap <Esc>p :lprev<CR>
+nnoremap <Esc>n :lnext<CR>
+nnoremap <Esc>b :cprev<CR>
+nnoremap <Esc>f :cnext<CR>
 
 " Terminal hotkey
 
