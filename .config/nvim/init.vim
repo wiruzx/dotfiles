@@ -1,16 +1,3 @@
-" Plugins
-call plug#begin('~/.vim/plugged')
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'roman/golden-ratio'
-Plug 'airblade/vim-gitgutter'
-Plug 'MattesGroeger/vim-bookmarks'
-Plug 'idbrii/vim-argedit'
-Plug 'gruvbox-community/gruvbox'
-
-call plug#end()
-
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -20,30 +7,65 @@ set shiftwidth=4
 set expandtab
 syntax on
 
-" Fix cursor
-set guicursor=
+set path+=**
 
-" Disable lines in terminal
-if has('nvim')
-    autocmd TermOpen * setlocal nonumber norelativenumber
+" Search of word under the cursor
+nnoremap ga :Ag<Space><CR>
+
+" Xcodebuild error format
+set errorformat=
+			\%f:%l:%c:{%*[^}]}:\ error:\ %m,
+			\%f:%l:%c:{%*[^}]}:\ fatal\ error:\ %m,
+			\%f:%l:%c:\ error:\ %m,
+			\%f:%l:%c:\ fatal\ error:\ %m,
+			\%f:%l:\ Error:\ %m,
+			\%f:%l:\ error:\ %m,
+			\%f:%l:\ fatal\ error:\ %m
+
+" Switch between buffers
+
+nnoremap + :bnext<CR>
+nnoremap _ :bprevious<CR>
+
+" Map Backspace to C-^
+nnoremap <Backspace> <C-^>
+
+" Tags
+set tags=tags
+
+" Clipboard
+
+set clipboard=unnamed
+
+" Disable swap files
+set noswapfile
+
+" Dark background by default
+set bg=dark
+
+" Setup mouse mode
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
+
+" Defaults
+source $VIMRUNTIME/defaults.vim
+
+" Change grep to ag
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor\ --vimgrep
+    set grepformat^=%f:%l:%c:%m
 endif
 
-" Fix closing terminal for neovim
-if has('nvim')
-    autocmd TermClose * execute 'bdelete! ' . expand('<abuf>')
-endif
-
-"Fix openning terminal in insert mode
-if has('nvim')
-    autocmd TermOpen term://* startinsert
-endif
-
-" Setup wildmenu
+" Wildmenu
 set wildmenu
-set wildmode=longest,full
-set wildchar=<C-e>
-
+set wildoptions=pum
+set wildmode=full:lastused
 set wildignore+=**/.git/*
+set wildignore+=UIGallery/**
+set wildignore+=**/generated/**
+set wildignore+=**/Generated/**
 
 " Relative line numbers
 set relativenumber
@@ -63,10 +85,10 @@ let g:netrw_liststyle = 2
 let mapleader = " "
 
 " FZF
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/bin/fzf
 
 let g:fzf_layout = { 'down': '100%' }
-let g:fzf_preview_window = [ 'up:50%' ]
+let g:fzf_preview_window = [ 'up:50%,border-horizontal' ]
 
 " An action can be a reference to a function that processes selected lines
 function! s:build_quickfix_list(lines)
@@ -76,20 +98,24 @@ function! s:build_quickfix_list(lines)
 endfunction
 
 let g:fzf_action = {
-  \ 'alt-q': function('s:build_quickfix_list'),
+  \ 'alt-c': function('s:build_quickfix_list'),
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
+command! -bang ProjectFiles call fzf#vim#files('.', fzf#vim#with_preview({'source': "fd '\.swift$' --type f --ignore-file ~/.projectignore" }), <bang>0)
+
 " TODO: Change letters
-nnoremap <leader>bf :Buffers<CR>
-nnoremap <leader>ps :GFiles<CR>
-nnoremap <leader>gf :GFiles?<CR>
-nnoremap <leader>fs :Files<CR>
-nnoremap <leader>ls :Lines<CR>
-nnoremap <leader>bs :BLines<CR>
-nnoremap <leader>ag :Ag<Space>
-nnoremap <leader>ga :Ag<Space><CR>
+nnoremap <leader>jf :Buffers<CR>
+nnoremap <leader>jd :Tags<CR>
+nnoremap <leader>js :BTags<CR>
+
+nnoremap <leader>fj :ProjectFiles<CR>
+nnoremap <leader>fk :GFiles<CR>
+nnoremap <leader>fl :Files<CR>
+
+nnoremap <leader>ld :Lines<CR>
+nnoremap <leader>lf :BLines<CR>
 
 " An easy way to leave insert mode
 inoremap jj <ESC>
@@ -97,6 +123,9 @@ inoremap jj <ESC>
 " Commands for inserting empty lines
 nnoremap <leader>O O<Esc>
 nnoremap <leader>o o<Esc>
+
+" Hide unopened buffers
+set hidden
 
 " Highlight cursor position
 set cul
@@ -106,6 +135,8 @@ set culopt=number
 map ' `
 
 " Setup search
+set nohlsearch
+set noincsearch
 set nowrapscan
 
 " Save on S
@@ -116,7 +147,7 @@ nnoremap <leader><leader> :noh<CR>
 
 " Golden Ratio
 let g:golden_ratio_autocommand = 0
-noremap <leader>gr :GoldenRatioToggle<CR>
+nnoremap <leader>gr :GoldenRatioToggle<CR>
 
 " No wrap!
 set nowrap
@@ -125,88 +156,15 @@ set nowrap
 
 nnoremap QL :lopen<CR>
 nnoremap QQ :copen<CR>
-nnoremap <Esc>p :lprev<CR>
-nnoremap <Esc>n :lnext<CR>
-nnoremap <Esc>b :cprev<CR>
-nnoremap <Esc>f :cnext<CR>
-
-" Windows Management
-
-" Jumping
-nnoremap <Esc>l <C-w>l
-nnoremap <Esc>h <C-w>h
-nnoremap <Esc>j <C-w>j
-nnoremap <Esc>k <C-w>k
-nnoremap <Esc>w <C-w><C-w>
-nnoremap <Esc>q <C-w>W
-
-" Jumping in terminal
-
-tnoremap <Esc>l <C-w>l
-tnoremap <Esc>h <C-w>h
-tnoremap <Esc>j <C-w>j
-tnoremap <Esc>k <C-w>k
-tnoremap <Esc>w <C-w><C-w>
-tnoremap <Esc>q <C-w>W
-
-" Moving
-nnoremap <Esc>L <C-w>L
-nnoremap <Esc>H <C-w>H
-nnoremap <Esc>J <C-w>J
-nnoremap <Esc>K <C-w>K
-
-" Moving in terminal
-tnoremap <Esc>L <C-w>L
-tnoremap <Esc>H <C-w>H
-tnoremap <Esc>J <C-w>J
-tnoremap <Esc>K <C-w>K
-
-" Splitting
-nnoremap <Esc>x <C-w>s
-nnoremap <Esc>v <C-w>v
-nnoremap <Esc>c <C-w>c
-nnoremap <Esc>o <C-w>o
-
-" Splitting in terminal
-tnoremap <Esc>x <C-w>s
-tnoremap <Esc>v <C-w>v
-tnoremap <Esc>c <C-w>c
-tnoremap <Esc>o <C-w>o
-
-
-" Resizing
-nnoremap <Esc>\ <C-w>_ <C-w>\|
-nnoremap <Esc>= <C-w>=
-nnoremap <Esc><Up> :resize +5<CR>
-nnoremap <Esc><Down> :resize -5<CR>
-nnoremap <Esc><Left> :vertical resize -5<CR>
-nnoremap <Esc><Right> :vertical resize +5<CR>
-
-" Resizing in terminal
-tnoremap <Esc>\ <C-w>_ <C-w>\|
-tnoremap <Esc>= <C-w>=
-tnoremap <Esc><Up> <C-w>:resize +5<CR>
-tnoremap <Esc><Down> <C-w>:resize -5<CR>
-tnoremap <Esc><Left> <C-w>:vertical resize -5<CR>
-tnoremap <Esc><Right> <C-w>:vertical resize +5<CR>
-
-" Tabs management
-nnoremap <leader>nt :tabe<CR>
-
-nnoremap <Esc>, :tabprev<CR>
-nnoremap <Esc>. :tabnext<CR>
-nnoremap <Esc>< :-tabmove<CR>
-nnoremap <Esc>> :+tabmove<CR>
-
-" Tabs management in terminal
-tnoremap <Esc>, <C-w>:tabprev<CR>
-tnoremap <Esc>. <C-w>:tabnext<CR>
-tnoremap <Esc>< <C-w>:-tabmove<CR>
-tnoremap <Esc>> <C-w>:+tabmove<CR>
+nnoremap p :lprev<CR>
+nnoremap n :lnext<CR>
+nnoremap b :cprev<CR>
+nnoremap f :cnext<CR>
 
 " Terminal hotkey
 
-nnoremap <leader>te :split \| term<CR>
+" nnoremap <leader>te :term<CR>
+nnoremap <leader>dj :term<CR>
 
 " Accessing buffer in terminal mode
 
@@ -220,26 +178,23 @@ cnoremap  <C-\><C-n>
 
 " Accessing command and search history
 
-noremap <leader>; q:
-noremap <leader>/ q/
+nnoremap <leader>dk q:
+nnoremap <leader>dl q/
 
 " Colorscheme
-colorscheme gruvbox
+colorscheme gruvbox8
 
 " Change the default splits
 
 set splitbelow splitright
 
 " Insert space
-nnoremap <Leader>s i<Space><Esc>
-nnoremap <Leader>S a<Space><Esc>
+nnoremap <Leader>ps i<Space><Esc>
 
 " Split the line
-
-nnoremap <leader>x i<CR><Esc>
+nnoremap <leader>px i<CR><Esc>
 
 " Copy current file path, name
-
 nnoremap <leader>cf :let @" = expand("%:t")<CR>
 nnoremap <leader>cp :let @" = expand("%")<CR>
 
@@ -250,7 +205,7 @@ let g:gitgutter_signs = 0
 
 nnoremap <leader>gs :GitGutterStage<CR>
 nnoremap <leader>gu :GitGutterUndoHunk<CR>
-nnoremap <leader>gl :GitGutterLineHighlightsToggle<CR>
+nnoremap <leader>gl :GitGutterSignsToggle<CR>
 
 " Diff
 nnoremap <leader>dt :difft<CR>
@@ -263,15 +218,46 @@ inoremap <C-e> <C-o>$
 
 " Control-jumps
 
-nnoremap <C-j> 6j
-nnoremap <C-k> 6k
-nnoremap <C-h> 12h
-nnoremap <C-l> 12l
+" nnoremap <C-j> 6j
+" nnoremap <C-k> 6k
+" nnoremap <C-h> 12h
+" nnoremap <C-l> 12l
 
-" Bookmarks setup
+" EasyMotion
 
-let g:bookmark_save_per_working_dir = 1
-let g:bookmark_auto_save = 1
-let g:bookmark_sign = '=>'
-let g:bookmark_display_annotation = 1
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_smartsign_us = 1
 
+vmap <leader>s <Plug>(easymotion-s2)
+vmap <C-j> <Plug>(easymotion-j)
+vmap <C-k> <Plug>(easymotion-k)
+vmap <C-h> <Plug>(easymotion-b)
+vmap <C-l> <Plug>(easymotion-w)
+
+nmap <leader>s <Plug>(easymotion-s2)
+nmap <C-j> <Plug>(easymotion-j)
+nmap <C-k> <Plug>(easymotion-k)
+nmap <C-h> <Plug>(easymotion-b)
+nmap <C-l> <Plug>(easymotion-w)
+
+" nmap <leader>i <Plug>(easymotion-s)
+" nmap <leader>j <Plug>(easymotion-j)
+" nmap <leader>k <Plug>(easymotion-k)
+
+" quick-scope
+
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'unblevable/quick-scope'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'roman/golden-ratio'
+Plug 'airblade/vim-gitgutter'
+Plug 'idbrii/vim-argedit'
+Plug 'easymotion/vim-easymotion'
+
+call plug#end()
