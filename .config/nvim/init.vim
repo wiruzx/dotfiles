@@ -72,6 +72,21 @@ set relativenumber
 " Show line number by default
 set nu
 
+"
+" Plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'unblevable/quick-scope'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'roman/golden-ratio'
+Plug 'airblade/vim-gitgutter'
+Plug 'idbrii/vim-argedit'
+Plug 'easymotion/vim-easymotion'
+
+call plug#end()
+
+
 " A better %
 packadd! matchit
 
@@ -244,15 +259,3 @@ nmap <C-l> <Plug>(easymotion-w)
 
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
-" Plugins
-call plug#begin('~/.vim/plugged')
-
-Plug 'unblevable/quick-scope'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'roman/golden-ratio'
-Plug 'airblade/vim-gitgutter'
-Plug 'idbrii/vim-argedit'
-Plug 'easymotion/vim-easymotion'
-
-call plug#end()
