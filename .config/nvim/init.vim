@@ -48,9 +48,8 @@ set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
-
-" Defaults
-source $VIMRUNTIME/defaults.vim
+" Change neovim defaults
+set ruler!
 
 " Change grep to ag
 if executable('ag')
@@ -124,9 +123,6 @@ inoremap jj <ESC>
 nnoremap <leader>O O<Esc>
 nnoremap <leader>o o<Esc>
 
-" Hide unopened buffers
-set hidden
-
 " Highlight cursor position
 set cul
 set culopt=number
@@ -135,7 +131,6 @@ set culopt=number
 map ' `
 
 " Setup search
-set nohlsearch
 set noincsearch
 set nowrapscan
 
