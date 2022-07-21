@@ -70,6 +70,11 @@ if has('nvim')
     autocmd TermOpen term://* startinsert
 endif
 
+" Disable lines in terminal
+if has('nvim')
+    autocmd TermOpen * setlocal nonumber norelativenumber
+endif
+
 " Wildmenu
 set wildmenu
 set wildoptions=pum
