@@ -11,3 +11,6 @@
 # Projectile
 projectile-bookmarks.eld
 .emacs.d/transient/*
+
+# Copilot
+.config/github-copilot/hosts.json
