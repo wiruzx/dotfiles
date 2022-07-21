@@ -83,6 +83,7 @@ Plug 'roman/golden-ratio'
 Plug 'airblade/vim-gitgutter'
 Plug 'idbrii/vim-argedit'
 Plug 'easymotion/vim-easymotion'
+Plug 'gruvbox-community/gruvbox'
 
 call plug#end()
 
@@ -192,7 +193,7 @@ nnoremap <leader>dk q:
 nnoremap <leader>dl q/
 
 " Colorscheme
-colorscheme gruvbox8
+colorscheme gruvbox
 
 " Change the default splits
 
