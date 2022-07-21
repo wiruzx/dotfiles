@@ -107,6 +107,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'idbrii/vim-argedit'
 Plug 'easymotion/vim-easymotion'
 Plug 'gruvbox-community/gruvbox'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
