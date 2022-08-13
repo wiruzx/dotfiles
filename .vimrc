@@ -113,6 +113,7 @@ nnoremap <leader>js :BTags<CR>
 nnoremap <leader>fj :ProjectFiles<CR>
 nnoremap <leader>fk :GFiles<CR>
 nnoremap <leader>fl :Files<CR>
+nnoremap <leader>f; :GFiles?<CR>
 
 nnoremap <leader>ld :Lines<CR>
 nnoremap <leader>lf :BLines<CR>
