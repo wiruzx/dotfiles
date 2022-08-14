@@ -88,7 +88,7 @@ let mapleader = " "
 set rtp+=/opt/homebrew/bin/fzf
 
 let g:fzf_layout = { 'down': '100%' }
-let g:fzf_preview_window = [ 'up:50%,border-horizontal' ]
+let g:fzf_preview_window = [ 'up:80%,border-horizontal' ]
 
 " An action can be a reference to a function that processes selected lines
 function! s:build_quickfix_list(lines)
