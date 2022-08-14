@@ -114,5 +114,7 @@ alt-d:deselect-all,\
 alt-j:page-down,\
 alt-k:page-up,\
 alt-l:first,\
-alt-h:last\
+alt-h:last,\
+alt-,:preview-page-up,\
+alt-.:preview-page-down\
 '"
