@@ -260,5 +260,6 @@ Plug 'roman/golden-ratio'
 Plug 'airblade/vim-gitgutter'
 Plug 'idbrii/vim-argedit'
 Plug 'easymotion/vim-easymotion'
+Plug 'udalov/kotlin-vim'
 
 call plug#end()
