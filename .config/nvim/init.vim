@@ -111,6 +111,11 @@ Plug 'github/copilot.vim'
 
 call plug#end()
 
+let g:copilot_filetypes = {
+      \ 'md': v:true,
+      \ 'markdown': v:true,
+      \ '': v:true,
+      \ }
 
 " A better %
 packadd! matchit
