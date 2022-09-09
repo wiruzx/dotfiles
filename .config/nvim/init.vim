@@ -7,6 +7,8 @@ set shiftwidth=4
 set expandtab
 syntax on
 
+set so=999
+
 set path+=**
 
 " Search of word under the cursor
