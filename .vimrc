@@ -263,5 +263,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'idbrii/vim-argedit'
 Plug 'easymotion/vim-easymotion'
 Plug 'udalov/kotlin-vim'
+Plug 'wellle/context.vim'
 
 call plug#end()
