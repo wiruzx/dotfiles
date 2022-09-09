@@ -7,8 +7,6 @@ set shiftwidth=4
 set expandtab
 syntax on
 
-set so=999
-
 set path+=**
 
 " Search of word under the cursor
@@ -266,3 +264,6 @@ Plug 'udalov/kotlin-vim'
 Plug 'wellle/context.vim'
 
 call plug#end()
+
+set so=999
+
