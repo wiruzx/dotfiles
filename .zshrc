@@ -42,3 +42,4 @@ alias ctags="`brew --prefix`/bin/ctags"
 # Setup fzf
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
