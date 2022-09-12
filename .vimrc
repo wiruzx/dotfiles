@@ -265,5 +265,3 @@ Plug 'wellle/context.vim'
 
 call plug#end()
 
-set so=999
-
