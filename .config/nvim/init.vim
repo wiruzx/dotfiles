@@ -9,6 +9,9 @@ syntax on
 
 set path+=**
 
+" Save and exit from insert mode
+inoremap  <C-\><C-n>:x<CR>
+
 " Search of word under the cursor
 nnoremap ga :Ag<Space><CR>
 
