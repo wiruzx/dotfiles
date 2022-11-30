@@ -112,7 +112,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'gruvbox-community/gruvbox'
 Plug 'github/copilot.vim'
 Plug 'udalov/kotlin-vim'
-Plug 'wellle/context.vim'
 
 call plug#end()
 
