@@ -209,7 +209,7 @@ nnoremap <Esc>f :cnext<CR>
 " Terminal hotkey
 
 " nnoremap <leader>te :term<CR>
-nnoremap <leader>dj :term<CR>
+nnoremap <leader>dj <C-W>s:term<CR>
 
 " Accessing buffer in terminal mode
 
