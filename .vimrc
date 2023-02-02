@@ -264,6 +264,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'idbrii/vim-argedit'
 Plug 'easymotion/vim-easymotion'
 Plug 'udalov/kotlin-vim'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
