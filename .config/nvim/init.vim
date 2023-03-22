@@ -119,6 +119,10 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'dpayne/CodeGPT.nvim'
 
+" Another ChatGPT plugin
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'jackMort/ChatGPT.nvim'
+
 call plug#end()
 
 let g:copilot_filetypes = {
