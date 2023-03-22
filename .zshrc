@@ -1,5 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+source "$HOME/.zshenv"
+
 unsetopt prompt_cr prompt_sp
 
 ZSH_THEME="minimal"
