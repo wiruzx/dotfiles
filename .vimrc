@@ -147,7 +147,7 @@ set nowrapscan
 nnoremap S :w<CR>
 
 " Space Space
-nnoremap <leader><leader> :noh<CR>
+nnoremap <leader><leader> :BLines<CR>
 
 " Golden Ratio
 let g:golden_ratio_autocommand = 0
