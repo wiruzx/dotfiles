@@ -114,6 +114,11 @@ Plug 'github/copilot.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-commentary'
 
+" ChatGPT integration
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'dpayne/CodeGPT.nvim'
+
 call plug#end()
 
 let g:copilot_filetypes = {
