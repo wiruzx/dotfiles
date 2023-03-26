@@ -10,6 +10,15 @@
 (require 'cask "~/.cask/cask.el")
 (cask--initialize)
 
+
+;; Org AI
+
+(require 'org-ai)
+(add-hook 'org-mode-hook #'org-ai-mode)
+
+(setq org-ai-openai-api-token (getenv "OPENAI_API_KEY"))
+
+
 ;; Org capture
 
 (setq org-directory "~/Developer/badoo-journal")

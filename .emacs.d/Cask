@@ -48,3 +48,4 @@
 (depends-on "expand-region")
 (depends-on "projectile")
 (depends-on "ag")
+(depends-on "org-ai")
