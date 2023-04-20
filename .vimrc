@@ -9,6 +9,8 @@ syntax on
 
 set path+=**
 
+set scrolloff=0
+
 " Save and exit from insert mode
 inoremap  <C-\><C-n>:x<CR>
 
