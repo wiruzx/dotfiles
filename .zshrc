@@ -45,3 +45,8 @@ alias ctags="`brew --prefix`/bin/ctags"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+
+# Tuist commands
+
+alias tu="tuist generate"
+alias tup="tuist generate -p"
