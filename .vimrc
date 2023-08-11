@@ -9,8 +9,6 @@ syntax on
 
 set path+=**
 
-set scrolloff=0
-
 " Save and exit from insert mode
 inoremap  <C-\><C-n>:x<CR>
 
@@ -57,6 +55,8 @@ map <ScrollWheelDown> <C-E>
 
 " Defaults
 source $VIMRUNTIME/defaults.vim
+
+set scrolloff=0
 
 " Change grep to ag
 if executable('ag')
