@@ -272,3 +272,7 @@ Plug 'Exafunction/codeium.vim'
 
 call plug#end()
 
+" Codeium
+let g:codeium_server_config = {
+  \'portal_url': 'http://codeium.bmbl.tech',
+  \'api_url': 'http://codeium.bmbl.tech/_route/api_server' }
