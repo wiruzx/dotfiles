@@ -268,6 +268,7 @@ Plug 'idbrii/vim-argedit'
 Plug 'easymotion/vim-easymotion'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-commentary'
+Plug 'Exafunction/codeium.vim'
 
 call plug#end()
 
