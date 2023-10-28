@@ -125,9 +125,9 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'jackMort/ChatGPT.nvim'
 
 " xbase
-Plug 'neovim/nvim-lspconfig'
-Plug 'xbase-lab/xbase', { 'do': 'make install' }
-lua require'xbase'.setup()
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'xbase-lab/xbase', { 'do': 'make install' }
+" lua require'xbase'.setup()
 
 call plug#end()
 
