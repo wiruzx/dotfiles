@@ -116,13 +116,13 @@ Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-commentary'
 
 " ChatGPT integration
-Plug 'nvim-lua/plenary.nvim'
-Plug 'MunifTanjim/nui.nvim'
-Plug 'dpayne/CodeGPT.nvim'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'MunifTanjim/nui.nvim'
+" Plug 'dpayne/CodeGPT.nvim'
 
 " Another ChatGPT plugin
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'jackMort/ChatGPT.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
+" Plug 'jackMort/ChatGPT.nvim'
 
 " xbase
 " Plug 'neovim/nvim-lspconfig'
