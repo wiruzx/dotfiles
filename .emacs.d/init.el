@@ -17,7 +17,7 @@
 (add-hook 'org-mode-hook #'org-ai-mode)
 
 (setq org-ai-openai-api-token (getenv "OPENAI_API_KEY"))
-
+(setq org-ai-default-chat-model "gpt-4")
 
 ;; Org capture
 
