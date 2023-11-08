@@ -153,7 +153,7 @@ let mapleader = " "
 " FZF
 set rtp+=/opt/homebrew/bin/fzf
 
-let g:fzf_layout = { 'down': '100%' }
+let g:fzf_layout = { 'down': '50%' }
 let g:fzf_preview_window = [ 'up:80%,border-horizontal' ]
 
 " An action can be a reference to a function that processes selected lines
