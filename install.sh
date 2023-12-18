@@ -1,5 +1,7 @@
 #!/bin/bash
 
+current_dir=$(pwd)
+
 dotfiles=(.zshrc .vimrc .emacs.d .config .fzf.zsh .ctags .tmux.conf)
 
 for file in "${dotfiles[@]}"; do
@@ -8,7 +10,7 @@ for file in "${dotfiles[@]}"; do
         continue
     fi
     echo "Will create symlink for $file"
-    ln -s $file ~/$file
+    ln -s $current_dir/$file ~/$file
 done
 
 echo "Done"
