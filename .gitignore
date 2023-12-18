@@ -1,3 +1,6 @@
+# macOS
+.DS_Store
+
 .cask
 .emacs.d/elpa/*
 .emacs.d/url/*
