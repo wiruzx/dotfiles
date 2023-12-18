@@ -21,9 +21,6 @@ alias gla="glog --all"
 alias gdc="gd --cached"
 
 export ICLD="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
-export BMBL="$HOME/Developer/ios/bumble/master"
-export BMB="$HOME/Developer/ios/bumble"
-export CHTT="$HOME/Developer/ios/Chatto"
 export DVL="$HOME/Developer"
 export DOT="$HOME/Developer/other/dotfiles"
 export IOS="$HOME/Developer/ios"
@@ -35,9 +32,6 @@ alias tre="tree -L 2"
 # Emacs cask
 export PATH="$HOME/.cask/bin:$PATH"
 
-# Pyenv support
-eval "$(pyenv init -)"
-
 # Use brew ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
@@ -45,8 +39,3 @@ alias ctags="`brew --prefix`/bin/ctags"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
-
-# Tuist commands
-
-alias tu="tuist generate"
-alias tup="tuist generate -p"
