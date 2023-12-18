@@ -189,7 +189,7 @@ nnoremap <leader>dk q:
 nnoremap <leader>dl q/
 
 " Colorscheme
-colorscheme gruvbox8
+autocmd vimenter * ++nested colorscheme gruvbox
 
 " Change the default splits
 
@@ -269,6 +269,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-commentary'
 Plug 'Exafunction/codeium.vim'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
