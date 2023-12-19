@@ -268,12 +268,7 @@ Plug 'idbrii/vim-argedit'
 Plug 'easymotion/vim-easymotion'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-commentary'
-Plug 'Exafunction/codeium.vim'
 Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-" Codeium
-let g:codeium_server_config = {
-  \'portal_url': 'http://codeium.bmbl.tech',
-  \'api_url': 'http://codeium.bmbl.tech/_route/api_server' }
