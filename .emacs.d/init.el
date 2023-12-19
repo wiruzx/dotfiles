@@ -1,15 +1,24 @@
-;; cask
+;; Packages
 
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-;; (package-initialize)
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-(require 'cask "~/.cask/cask.el")
-(cask--initialize)
-
+;; TODO: Use configuration inside of the sexp
+(use-package zenburn-theme :ensure t)
+(use-package org-ai :ensure t)
+(use-package ag :ensure t)
+(use-package projectile :ensure t)
+(use-package expand-region :ensure t)
+(use-package org-bullets :ensure t)
+(use-package pbcopy :ensure t)
+(use-package ace-jump-mode :ensure t)
+(use-package undo-tree :ensure t)
+(use-package magit :ensure t)
 
 ;; Org AI
 
@@ -88,32 +97,6 @@
 (global-set-key (kbd "C-c u") 'winner-undo)
 (global-set-key (kbd "C-c r") 'winner-redo)
 
-;; switch-window
-
-(require 'switch-window)
-
-(setq switch-window-increase 20)
-
-(global-set-key (kbd "C-x o") 'switch-window)
-
-(global-set-key (kbd "C-x 1") 'switch-window-then-maximize)
-(global-set-key (kbd "C-x 2") 'switch-window-then-split-below)
-(global-set-key (kbd "C-x 3") 'switch-window-then-split-right)
-(global-set-key (kbd "C-x 0") 'switch-window-then-delete)
-
-(setq switch-window-shortcut-style 'qwerty)
-(setq switch-window-qwerty-shortcuts
-      '("a" "s" "d" "f" "j" "k" "l" ";" "w" "e" "i" "o"))
-(setq switch-window-minibuffer-shortcut ?z)
-
-;; hl-line
-
-;; TODO: Fix for the light theme
-
-;;(global-hl-line-mode 1)
-;;(set-face-background 'hl-line "#3e4446")
-;;(set-face-foreground 'highlight nil)
-
 ;; org todo states
 
 (setq org-todo-keywords
@@ -133,19 +116,9 @@
                                 "○"
                                 "●"))
 
-;; gist
-
-(require 'gist)
-
 ;; org-jira
 
 (setq jiralib-url (getenv "JIRA_PATH"))
-
-;; multi-term
-
-(require 'multi-term)
-
-(setq multi-term-program "/usr/local/bin/zsh")
 
 ;; Mouse scrolling
 
@@ -265,15 +238,6 @@
 
 (ido-mode t)
 
-;; hydra
-
-(require 'hydra)
-
-;; hydras
-
-;; (load "~/.emacs.d/hydras/window")
-;; (global-set-key (kbd "C-c w") 'hydra-window/body)
-
 ;; scratch buffer
 
 (setq initial-scratch-message nil)
@@ -282,16 +246,6 @@
 ;; Number of lines
 
 (setq linum-format "%d ")
-
-;; company-mode
-
-(require 'company)
-
-(setq company-dabbrev-downcase nil)
-
-(add-hook 'after-init-hook 'global-company-mode)
-
-(add-to-list 'company-backends '(company-capf company-dabbrev))
 
 ;; Spaces instead of tabs
 
@@ -306,14 +260,9 @@
  '(git-gutter:deleted-sign "-")
  '(git-gutter:modified-sign "~")
  '(org-agenda-files
-   '("/Users/viktorshamanov/Developer/badoo-journal/today.org"
-     "/Users/viktorshamanov/Developer/badoo-journal/next.org"
-     "/Users/viktorshamanov/Developer/badoo-journal/inbox.org"
-     "/Users/viktorshamanov/Developer/badoo-journal/suspended.org"
-     "/Users/viktorshamanov/Developer/badoo-journal/backlog.org"
-     "/Users/viktorshamanov/Developer/badoo-journal/notes.org"))
+   '("/Users/shamanov/Developer/badoo-journal/today.org" "/Users/shamanov/Developer/badoo-journal/next.org" "/Users/shamanov/Developer/badoo-journal/inbox.org" "/Users/shamanov/Developer/badoo-journal/suspended.org" "/Users/shamanov/Developer/badoo-journal/backlog.org" "/Users/shamanov/Developer/badoo-journal/notes.org"))
  '(package-selected-packages
-   '(protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell drag-stuff company-sourcekit ace-jump-mode))
+   '(protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell drag-stuff ace-jump-mode))
  '(safe-local-variable-values
    '((org-todo-keyword-faces
       ("HOLD" . "yellow")
@@ -408,30 +357,6 @@
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-;; Folding an xml
-
-(require 'hideshow)
-(require 'sgml-mode)
-(require 'nxml-mode)
-
-(add-to-list 'hs-special-modes-alist
-             '(nxml-mode
-               "<!--\\|<[^/>]*[^/]>"
-               "-->\\|</[^/>]*[^/]>"
-
-               "<!--"
-               sgml-skip-tag-forward
-               nil))
-
-(add-hook 'nxml-mode-hook 'hs-minor-mode)
-
-(define-key nxml-mode-map (kbd "C-c h") 'hs-toggle-hiding)
-
-;; XMl mode 4 spaces
-
-(setq nxml-child-indent 4
-      nxml-attribute-indent 4)
-
 ;; Color theme
 
 (load-theme 'zenburn t)
@@ -450,26 +375,6 @@
 (require 'magit)
 
 (global-set-key (kbd "C-c g") 'magit-status)
-
-;; git-gutter
-
-(require 'git-gutter)
-
-(set-face-foreground 'git-gutter:modified "blue")
-(set-face-foreground 'git-gutter:added "green")
-(set-face-foreground 'git-gutter:deleted "red")
-
-(set-face-background 'git-gutter:added "gray")
-(set-face-background 'git-gutter:modified "gray")
-(set-face-background 'git-gutter:deleted "gray")
-
-(add-hook 'prog-mode-hook (lambda ()
-                            (git-gutter-mode 1)
-                            (custom-set-variables
-                             '(git-gutter:modified-sign "~")
-                             '(git-gutter:added-sign "+")
-                             '(git-gutter:deleted-sign "-"))))
-
 
 ;; Russian keyboard support
 
