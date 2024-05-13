@@ -20,6 +20,18 @@
 (use-package undo-tree :ensure t)
 (use-package magit :ensure t)
 
+;; Fix macos dark appearance
+
+;; #3
+
+(defun set-frame-style (frame)
+  "Customize the look of new frames."
+  (modify-frame-parameters frame
+                           '((ns-appearance . dark)
+                             (ns-transparent-titlebar . nil))))
+(set-frame-style (selected-frame))
+(add-hook 'after-make-frame-functions 'set-frame-style)
+
 ;; Org AI
 
 (require 'org-ai)
