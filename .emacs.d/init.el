@@ -22,8 +22,6 @@
 
 ;; Fix macos dark appearance
 
-;; #3
-
 (defun set-frame-style (frame)
   "Customize the look of new frames."
   (modify-frame-parameters frame
