@@ -19,6 +19,16 @@
 (use-package ace-jump-mode :ensure t)
 (use-package undo-tree :ensure t)
 (use-package magit :ensure t)
+(use-package org-roam
+             :ensure t
+             :custom (org-roam-directory "~/Developer/projects/wiki")
+             :bind (("C-c n l" . org-roam-buffer-toggle)
+                    ("C-c n f" . org-roam-node-find)
+                    ("C-c n g" . org-roam-graph)
+                    ("C-c n i" . org-roam-node-insert)
+                    ("C-c n c" . org-roam-capture)
+                    ("C-c n j" . org-roam-dailies-capture-today))
+             :config (org-roam-db-autosync-mode))
 
 ;; Fix macos dark appearance
 
@@ -272,7 +282,7 @@
  '(org-agenda-files
    '("/Users/shamanov/Developer/badoo-journal/today.org" "/Users/shamanov/Developer/badoo-journal/next.org" "/Users/shamanov/Developer/badoo-journal/inbox.org" "/Users/shamanov/Developer/badoo-journal/suspended.org" "/Users/shamanov/Developer/badoo-journal/backlog.org" "/Users/shamanov/Developer/badoo-journal/notes.org"))
  '(package-selected-packages
-   '(protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell drag-stuff ace-jump-mode))
+   '(org-roam protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell drag-stuff ace-jump-mode))
  '(safe-local-variable-values
    '((org-todo-keyword-faces
       ("HOLD" . "yellow")
