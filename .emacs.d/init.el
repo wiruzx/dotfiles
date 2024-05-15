@@ -48,10 +48,18 @@
 (setq org-ai-openai-api-token (getenv "OPENAI_API_KEY"))
 (setq org-ai-default-chat-model "gpt-4")
 
-;; Org capture
+;; Org capture & Agenda
 
-(setq org-directory "~/Developer/badoo-journal")
-(setq org-inbox-file (concat org-directory "/inbox.org"))
+(setq org-directory "~/Developer/projects/")
+(setq org-inbox-file (concat org-directory "inbox.org"))
+(setq org-agenda-files
+      (append
+       (file-expand-wildcards (concat org-directory "*.org"))
+       (file-expand-wildcards (concat org-directory "sprints/*/*.org"))))
+
+;; TODO: Remove if not needed
+(setq org-agenda-exclude-regexps '("wiki"))
+
 ;; (setq org-agenda-text-search-extra-files
 ;;       (directory-files (concat org-directory "/journal") t "\.org$"))
 
@@ -279,8 +287,6 @@
  '(git-gutter:added-sign "+")
  '(git-gutter:deleted-sign "-")
  '(git-gutter:modified-sign "~")
- '(org-agenda-files
-   '("/Users/shamanov/Developer/badoo-journal/today.org" "/Users/shamanov/Developer/badoo-journal/next.org" "/Users/shamanov/Developer/badoo-journal/inbox.org" "/Users/shamanov/Developer/badoo-journal/suspended.org" "/Users/shamanov/Developer/badoo-journal/backlog.org" "/Users/shamanov/Developer/badoo-journal/notes.org"))
  '(package-selected-packages
    '(org-roam protobuf-mode zenburn-theme yasnippet web-mode use-package undo-tree swift-mode smex smartparens projectile prodigy powerline popwin pallet nyan-mode multiple-cursors multi-term magit idle-highlight-mode hydra htmlize helm-ls-git flycheck-cask expand-region exec-path-from-shell drag-stuff ace-jump-mode))
  '(safe-local-variable-values
