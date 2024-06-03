@@ -189,7 +189,8 @@ nnoremap <leader>dk q:
 nnoremap <leader>dl q/
 
 " Colorscheme
-autocmd vimenter * ++nested colorscheme gruvbox
+" autocmd vimenter * ++nested colorscheme gruvbox
+colorscheme zellner
 
 " Change the default splits
 

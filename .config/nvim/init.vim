@@ -245,7 +245,8 @@ nnoremap <leader>dk q:
 nnoremap <leader>dl q/
 
 " Colorscheme
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme zellner
 
 " Change the default splits
 
