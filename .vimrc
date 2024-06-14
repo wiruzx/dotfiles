@@ -190,7 +190,7 @@ nnoremap <leader>dl q/
 
 " Colorscheme
 " autocmd vimenter * ++nested colorscheme gruvbox
-colorscheme zellner
+colorscheme retrobox
 
 " Change the default splits
 
