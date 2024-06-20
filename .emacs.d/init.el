@@ -35,7 +35,7 @@
 (defun set-frame-style (frame)
   "Customize the look of new frames."
   (modify-frame-parameters frame
-                           '((ns-appearance . dark)
+                           '((ns-appearance . light)
                              (ns-transparent-titlebar . nil))))
 (set-frame-style (selected-frame))
 (add-hook 'after-make-frame-functions 'set-frame-style)
@@ -283,7 +283,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" default))
+   '("f079ef5189f9738cf5a2b4507bcaf83138ad22d9c9e32a537d61c9aae25502ef" "4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" default))
  '(git-gutter:added-sign "+")
  '(git-gutter:deleted-sign "-")
  '(git-gutter:modified-sign "~")
@@ -385,7 +385,7 @@
 
 ;; Color theme
 
-(load-theme 'zenburn t)
+(load-theme 'adwaita t)
 
 ;; Hiding extra panels
 
