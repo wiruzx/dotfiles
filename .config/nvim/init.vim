@@ -116,6 +116,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'github/copilot.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'tpope/vim-commentary'
+Plug 'neovim/nvim-lspconfig'
 
 " ChatGPT integration
 " Plug 'nvim-lua/plenary.nvim'
@@ -132,6 +133,11 @@ Plug 'tpope/vim-commentary'
 " lua require'xbase'.setup()
 
 call plug#end()
+
+" lsp setup
+luafile ~/.config/nvim/lua/plugins/lsp.lua
+
+" copilot
 
 let g:copilot_filetypes = {
       \ 'md': v:true,
