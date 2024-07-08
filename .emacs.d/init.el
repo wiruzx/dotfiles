@@ -35,7 +35,7 @@
 (defun set-frame-style (frame)
   "Customize the look of new frames."
   (modify-frame-parameters frame
-                           '((ns-appearance . light)
+                           '((ns-appearance . dark)
                              (ns-transparent-titlebar . nil))))
 (set-frame-style (selected-frame))
 (add-hook 'after-make-frame-functions 'set-frame-style)
@@ -385,7 +385,9 @@
 
 ;; Color theme
 
-(load-theme 'adwaita t)
+;;(load-theme 'adwaita t)
+
+(load-theme 'zenburn t)
 
 ;; Hiding extra panels
 
