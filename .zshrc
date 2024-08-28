@@ -23,9 +23,9 @@ alias gdc="gd --cached"
 export ICLD="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 export DVL="$HOME/Developer"
 export DOT="$HOME/Developer/other/dotfiles"
-export IOS="$HOME/Developer/ios"
+export ICR="$HOME/Developer/swift/icarus"
 export CHSH="$HOME/Developer/other/cheatsheets"
-export BDJR="$HOME/Developer/badoo-journal"
+export PRJ="$HOME/Developer/projects"
 
 alias tre="tree -L 2"
 
