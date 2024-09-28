@@ -15,14 +15,6 @@ syntax on
 
 set path+=**
 
-" Center after jumping
-
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
-:nnoremap <expr> ' "'" . nr2char(getchar()) . 'zz'
-
 " Save and exit from insert mode
 inoremap  <C-\><C-n>:x<CR>
 
