@@ -8,7 +8,7 @@ ZSH_THEME="minimal"
 
 plugins=(git)
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # Enable Ctrl-x-e to edit command line
 autoload -U edit-command-line
