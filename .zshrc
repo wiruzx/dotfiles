@@ -26,6 +26,8 @@ export DOT="$HOME/Developer/other/dotfiles"
 export ICR="$HOME/Developer/swift/icarus"
 export CHSH="$HOME/Developer/other/cheatsheets"
 export PRJ="$HOME/Developer/projects"
+export ZEU="$HOME/Developer/swift/zeus"
+export ZEUS="$HOME/Developer/swift/zeus/main"
 
 alias tre="tree -L 2"
 
@@ -39,3 +41,8 @@ alias ctags="`brew --prefix`/bin/ctags"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+
+# Speechify
+
+# Added by `rbenv init` on Mon  1 Sep 2025 01:37:35 BST
+eval "$(rbenv init - --no-rehash zsh)"
