@@ -309,6 +309,11 @@
       (if-let ((issue-number (match-string 1 string)))
           (cons string issue-number))))
 
+(defun linear-link-recognizer (string)
+  (if (string-match "https?://linear\\.app/[^/]+/issue/\\([a-zA-Z]+-[0-9]+\\)" string)
+      (if-let ((issue-number (match-string 1 string)))
+          (cons string issue-number))))
+
 (defun github-repo-link-recognizer (string)
   (if (string-match "https?:\/\/github.com\/\\([a-zA-Z0-9_-]+\/[a-zA-Z0-9_-]+\\)\/?" string)
       (if-let ((repo-name (match-string 1 string)))
@@ -327,6 +332,7 @@
   (github-hash-digits-recognizer "pull" string))
 
 (defvar org-link-recognizers '(jira-link-recognizer
+                               linear-link-recognizer
                                github-pull-link-recognizer
                                github-issue-link-recognizer
                                github-repo-link-recognizer))
