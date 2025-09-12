@@ -19,6 +19,7 @@ bindkey '^v' edit-command-line
 
 alias gla="glog --all"
 alias gdc="gd --cached"
+alias gcan="git commit --amend --no-edit"
 
 export ICLD="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 export DVL="$HOME/Developer"
