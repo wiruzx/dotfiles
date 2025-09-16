@@ -52,10 +52,22 @@
 
 (setq org-directory "~/Developer/projects/")
 (setq org-inbox-file (concat org-directory "inbox.org"))
-(setq org-agenda-files
-      (append
-       (file-expand-wildcards (concat org-directory "*.org"))
-       (file-expand-wildcards (concat org-directory "sprints/*/*.org"))))
+
+;; FIX: Lazy load agenda files to avoid scanning on every file open
+;; Only scan when actually using agenda
+(setq org-agenda-files nil)  ; Start with empty list
+
+; (defun my-load-org-agenda-files ()
+;   "Load org agenda files only when needed"
+;   (interactive)
+;   (setq org-agenda-files
+;         (append
+;          (file-expand-wildcards (concat org-directory "*.org"))
+;          (file-expand-wildcards (concat org-directory "sprints/*/*.org"))))
+;   (message "Loaded %d agenda files" (length org-agenda-files)))
+
+; ;; Load agenda files only when agenda is actually opened
+; (advice-add 'org-agenda :before #'my-load-org-agenda-files)
 
 ;; TODO: Remove if not needed
 (setq org-agenda-exclude-regexps '("wiki"))
@@ -382,6 +394,25 @@
 ;; Undo tree
 
 (require 'undo-tree)
+
+;; FIX: Disable persistent undo history (causes massive slowdowns)
+(setq undo-tree-auto-save-history nil)
+
+;; Optional: If you want to keep history but reduce lag:
+;; (setq undo-tree-auto-save-history t)
+;; (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo-tree-history/")))
+
+; ;; Reduce undo limits for better performance
+; (setq undo-tree-limit 80000)          ; Default is 80000
+; (setq undo-tree-strong-limit 120000)  ; Default is 120000
+; (setq undo-tree-outer-limit 12000000) ; Default is 12000000 (12MB)
+
+; ;; Don't save undo history for remote files or large files
+; (add-hook 'find-file-hook
+;           (lambda ()
+;             (when (or (file-remote-p buffer-file-name)
+;                       (> (buffer-size) (* 1024 500))) ; 500KB
+;               (setq-local undo-tree-auto-save-history nil))))
 
 (global-undo-tree-mode)
 
