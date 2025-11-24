@@ -16,3 +16,6 @@ Cursor - [cursor]
 Don't try to build the app without committing the changes. Commit often
 
 When undoing past work, prefer reverting commits, never git do reset
+
+Please ignore all the files in the following directories. Never change them, never use them.
+./SpeechifyPodcasts/
