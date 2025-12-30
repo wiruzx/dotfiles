@@ -13,10 +13,11 @@ OpenAI Codex - [codex]
 Google Gemini - [gemini]
 Cursor - [cursor]
 
-Don't try to build the app without committing the changes. Commit often
+Commit first, then build if needed.
 
 When undoing past work, prefer reverting commits, never git do reset
 
+NEVER ammend commits
 NEVER do git push
 
 Please ignore all the files in the following directories. Never change them, never use them.
