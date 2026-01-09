@@ -29,8 +29,6 @@ export CHSH="$HOME/Developer/other/cheatsheets"
 export PRJ="$HOME/Developer/projects"
 export ZEU="$HOME/Developer/swift/zeus"
 export ZEUS="$HOME/Developer/swift/zeus/main"
-export SPCHF="$HOME/Developer/speechify/master"
-export SPCH="$HOME/Developer/speechify"
 
 alias tre="tree -L 2"
 
