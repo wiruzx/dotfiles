@@ -30,6 +30,10 @@
                     ("C-c n j" . org-roam-dailies-capture-today))
              :config (org-roam-db-autosync-mode))
 
+;; org mode one handed hotkeys
+(global-set-key (kbd "s-[") 'org-clock-in)
+(global-set-key (kbd "s-]") 'org-clock-out)
+
 ;; Fix macos dark appearance
 
 (defun set-frame-style (frame)
