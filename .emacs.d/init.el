@@ -148,8 +148,21 @@
         (sequence "HOLD(h)")
         (sequence "|" "CANCELED(c)" "SUSPENDED(s)")))
 
+;; new
+
+; (setq org-todo-keywords
+;       '((sequence "TODO(t)" "PROG(p)" "|" "DONE(d)")
+;         (sequence "HOLD(h)")
+;         (sequence "|" "CNCL(c)" "SUSP(s)" "BLKD(b")))
+
 (setq org-todo-keyword-faces
-      '(("HOLD" . "yellow") ("SUSPENDED" . "grey")))
+      '(("HOLD" . "yellow")
+        ("SUSPENDED" . "grey")
+        ; new
+        ("PROG" . "orange")
+        ("SUSP" . "grey")
+        ("BLKD" . "red")
+        ))
 
 ;; org-bullets
 
