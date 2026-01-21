@@ -157,7 +157,8 @@
 ;; new
 
 ; (setq org-todo-keywords
-;       '((sequence "TODO(t)" "PROG(p)" "|" "DONE(d)")
+;       '((sequence "TODO(t)" "|" "DONE(d)")
+;         (sequence "PROG(p)")
 ;         (sequence "HOLD(h)")
 ;         (sequence "ONQA(q)")
 ;         (sequence "MERG(m)")
