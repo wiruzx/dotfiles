@@ -159,6 +159,8 @@
 ; (setq org-todo-keywords
 ;       '((sequence "TODO(t)" "PROG(p)" "|" "DONE(d)")
 ;         (sequence "HOLD(h)")
+;         (sequence "ONQA(q)")
+;         (sequence "MERG(m)")
 ;         (sequence "|" "CNCL(c)" "SUSP(s)" "BLKD(b")))
 
 (setq org-todo-keyword-faces
@@ -166,6 +168,8 @@
         ("SUSPENDED" . "grey")
         ; new
         ("PROG" . "orange")
+        ("ONQA" . "yellow")
+        ("MERG"" . "green")
         ("SUSP" . "grey")
         ("BLKD" . "red")
         ))
