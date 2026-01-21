@@ -38,6 +38,7 @@
 ;; org mode one handed hotkeys
 (global-set-key (kbd "s-[") 'org-clock-in)
 (global-set-key (kbd "s-]") 'org-clock-out)
+(global-set-key (kbd "s-'") 'org-clock-goto)
 
 ;; Fix macos dark appearance
 
