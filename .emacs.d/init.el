@@ -30,6 +30,11 @@
                     ("C-c n j" . org-roam-dailies-capture-today))
              :config (org-roam-db-autosync-mode))
 
+;; Auto-revert files when changed on disk
+(global-auto-revert-mode 1)
+(when (getenv "TERM_PROGRAM")
+  (setq auto-revert-use-notify nil))
+
 ;; org mode one handed hotkeys
 (global-set-key (kbd "s-[") 'org-clock-in)
 (global-set-key (kbd "s-]") 'org-clock-out)
