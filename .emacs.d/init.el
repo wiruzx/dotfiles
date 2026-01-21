@@ -169,7 +169,7 @@
         ; new
         ("PROG" . "orange")
         ("ONQA" . "yellow")
-        ("MERG"" . "green")
+        ("MERG" . "green")
         ("SUSP" . "grey")
         ("BLKD" . "red")
         ))
