@@ -19,3 +19,6 @@ projectile-bookmarks.eld
 # Copilot
 .config/github-copilot/hosts.json
 .config/simple-update-notifier/*
+
+# Hera Lite (local only)
+.hera/
