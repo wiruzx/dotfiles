@@ -30,6 +30,8 @@ export CHSH="$HOME/Developer/other/cheatsheets"
 export PRJ="$HOME/Developer/projects"
 export ZEU="$HOME/Developer/swift/zeus"
 export ZEUS="$HOME/Developer/swift/zeus/main"
+export HER="$LAB/hera"
+export HERA="$LAB/hera/main"
 
 alias tre="tree -L 2"
 
