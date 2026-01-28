@@ -194,7 +194,10 @@ nnoremap <leader>dl q/
 
 " Colorscheme
 " autocmd vimenter * ++nested colorscheme gruvbox
-colorscheme retrobox
+" colorscheme retrobox
+
+" set termguicolors
+colorscheme orng
 
 " Change the default splits
 

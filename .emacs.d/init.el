@@ -452,7 +452,10 @@
 
 ;;(load-theme 'adwaita t)
 
-(load-theme 'zenburn t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'orng t)
+
+; (load-theme 'zenburn t)
 
 ;; Hiding extra panels
 
